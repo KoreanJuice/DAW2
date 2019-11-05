@@ -1,0 +1,21 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  margin: 0 auto;
+  width: 500px;
+  font-size: 12px;
+  background-color: gainsboro;
+}
+#wrapper {
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+video {
+  margin: 10px 0;
+}
+progress {
+  margin-top: 10px;
+  width: 70%
+}

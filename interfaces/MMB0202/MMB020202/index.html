@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulario PO0202v2</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Sign Up</h1>
+      <fieldset>
+        <legend>
+          <span class="circle">1</span>Your basic info
+        </legend>
+        <label for="name">Name:</label>
+          <input type="text" id="name" autofocus required>
+        <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        <label for="password">Password:</label>
+          <input type="password" id="password" required>
+        <label for="age">Age:</label>
+          <input type="radio" id="age" value="-13" required>Under 13
+          <input type="radio" id="age" value="13+" required>13 or older
+      </fieldset>
+      <fieldset>
+        <legend>
+          <span class="circle">2</span>Your profile
+        </legend>
+        <label for="biography">Biography:</label>
+          <textarea id="biography" rows="8" cols="30" required></textarea>
+        <label for="role">Job Role:</label>
+          <select class="role" id="role" required>
+            <option value="" disabled hidden selected>Front-End Developer</option>
+            <option value="front-end-dev">Front-End Developer</option>
+            <option value="back-end-dev">Back-End Developer</option>
+            <option value="full-stack-dev">Full-Stack Developer</option>
+          </select>
+        <label for="interest">Interests:</label>
+          <input type="checkbox" id="interest" value="development">Development
+          <input type="checkbox" id="interest" value="design">Design
+          <input type="checkbox" id="interest" value="business">Business
+      </fieldset>
+      <input type="submit" id="submit" value="Sign Up">
+    </div>
+  </body>
+</html>

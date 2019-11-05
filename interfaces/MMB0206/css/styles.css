@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #1d1d1d;
+}
+#wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+#left {
+  background-image: url('../img/portada1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: 100vh;
+}
+#right {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+}
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+#btnEntrar {
+  padding: 15px 25px;
+  background-color: orange;
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-variant: small-caps;
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

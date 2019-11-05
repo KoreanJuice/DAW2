@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+  font-family: "Open Sans";
+    src: url(.\assets\OpenSans-Regular.ttf)
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  background: #f5f5f5;
+}
+.container a:hover{
+  color: white;
+  background: #144360;
+}
+.container div, .container a{
+  flex-grow: 1;
+}
+.next{
+  text-align: right;
+  margin: 12px 20px 0 0;
+}
+.previous{
+  margin: 12px 0 0 20px;
+}
+.back2Main{
+  margin: 12px 0 0 0;
+  text-align: center;
+}
+.preContainer {
+  padding: 0 0 0 15%;
+}
+.preContainer div {
+  display: inline-block;
+  text-align: left;
+}
+.game-list{
+  text-align: center;
+  margin: 12px 0 0 0;
+}
+body{
+  background-image: url("../img/ff_back_chocobo.png");
+  /*background-size: cover;*/
+}
+main{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0 auto;
+  width: 1000px;
+  box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.55);
+  padding: 30px;
+  background-color: white;
+}
+a{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-variant: small-caps;
+  color: #3e3e3e;
+}
+ul a{
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-variant: small-caps;
+  color: #3e3e3e;
+}
+ul, h2{
+  font-family: 'Open Sans';
+}
+h1{
+  font-family: 'Roboto', sans-serif;
+  background: #f5f5f5;
+  padding: 15px 0 0 50px;
+  height: 50px;
+}
+mark{
+  background: #84d0ff
+}
+blockquote{
+  font-size: 1.2em;
+  width: 60%;
+  margin: 50px auto;
+  font-family: "Open Sans";
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #78C0A8 ;
+  line-height: 1.6;
+  position: relative;
+  background: #EDEDED;
+}
+blockquote::before{
+  font-family: Arial;
+  content: "\201C";
+  color: #78C0A8;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+figure{
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+p{
+  margin: 10px 60px 0;
+  line-height: 1.7;
+  padding: 10px;
+}
+video{
+  display: block;
+  margin: auto;
+  padding: 50px;
+}

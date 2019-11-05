@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PO0203</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen">
+  </head>
+  <body>
+  <div id="wrapper">
+    <h1>Sign Up</h1>
+    <form action="index.html" method="post">
+    <fieldset id="set-1">
+      <legend>
+        <span class="circle">1</span>Your basic info
+      </legend>
+      <label for="name">Name:</label>
+        <input type="text" id="name" maxlength="25" placeholder="Name..." autofocus required>
+      <label for="surname">Surname:</label>
+        <input type="text" id="surname" maxlength="25" placeholder="Surname..." required>
+      <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" required>
+      <label for="telephone">Telephone:</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="+34 666 666 666">
+      <label for="address">Address:</label>
+        <input type="text" id="address" name="address" maxlength="60" placeholder="C/ False, Buenos Aires, Argentina">
+      <label for="email">Email:</label>
+        <input type="email" id="email" maxlength="40" placeholder="example@example.ex" required>
+      <label for="photo">Profile photo:</label>
+        <input type="file" id="photo" name="photo">
+      <label>Sex:</label>
+        <input type="radio" name="sex" id="sex-m" value="man" required>
+        <label for="sex-m">Man</label>
+        <input type="radio" name="sex" id="sex-w" value="woman" required>
+        <label for="sex-w">Woman</label>
+        <input type="radio" name="sex" id="sex-o" value="other" required>
+        <label for="sex-o">Other</label>
+    </fieldset>
+    <fieldset id="set-2">
+      <legend>
+        <span class="circle">2</span>Experience
+      </legend>
+      <label>Qualification:</label>
+      <div class="degree-flex">
+        <div>
+          <label for="degree-1">
+            <input type="checkbox" id="degree-1" value="comp-science">
+            Computer Science</label>
+        </div>
+        <div>
+          <label for="degree-2">
+            <input type="checkbox" id="degree-2" value="web-development">
+            Web Development</label>
+        </div>
+        <div>
+          <label for="degree-3">
+            <input type="checkbox" id="degree-3" value="design">
+            Design</label>
+        </div>
+        <div>
+          <label for="degree-4">
+            <input type="checkbox" id="degree-4" value="marketing">
+            Marketing</label>
+        </div>
+      </div>
+      <label>Languages:</label>
+      <div class="lang-flex">
+        <div>
+          <select class="language-1" id="language-1">
+            <option value="" disabled hidden selected>Spanish</option>
+            <option value="spanish">Spanish</option>
+            <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+          </select>
+        </div>
+        <div>
+            <input type="radio" name="lang" id="lang-basic" value="basic">
+          <label for="lang-basic">Basic</label>
+        </div>
+        <div>
+            <input type="radio" name="lang" id="lang-normal" value="normal">
+          <label for="lang-normal">Normal</label>
+        </div>
+        <div>
+            <input type="radio" name="lang" id="lang-advanced" value="advanced">
+          <label for="lang-advanced">Advanced</label>
+        </div>
+      </div>
+      <div class="lang-flex">
+        <div>
+          <select class="language-2" id="language-2">
+            <option value="" disabled hidden selected>Spanish</option>
+            <option value="spanish">Spanish</option>
+            <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+          </select>
+        </div>
+        <div>
+            <input type="radio" name="lang2" id="lang-basic2" value="basic">
+          <label for="lang-basic2">Basic</label>
+        </div>
+        <div>
+            <input type="radio" name="lang2" id="lang-normal2" value="normal">
+          <label for="lang-normal2">Normal</label>
+        </div>
+        <div>
+            <input type="radio" name="lang2" id="lang-advanced2" value="advanced">
+          <label for="lang-advanced2">Advanced</label>
+        </div>
+      </div>
+      <label>Technical skills:</label>
+      <div>
+        <label for="sk-google-ad">Google Adwords:</label>
+        <div class="slidder">
+          <small>1</small><input type="range" id="sk-google-ad" name="sk-google-ad" min="1" max="10" value="0"><small>10</small>
+        </div>
+        <label for="sk-google-anal">Google Analitycs:</label>
+        <div class="slidder">
+          <small>1</small><input type="range" id="sk-google-anal" name="sk-google-anal" min="1" max="10" value="0"><small>10</small>
+        </div>
+        <label for="sk-office-suite">Office Suite:</label>
+        <div class="slidder">
+          <small>1</small><input type="range" id="sk-office-suite" name="sk-office-suite" min="1" max="10" value="0"><small>10</small>
+        </div>
+        <label for="sk-seo">SEO:</label>
+        <div class="slidder">
+          <small>1</small><input type="range" id="sk-seo" name="sk-seo" min="1" max="10" value="0"><small>10</small>
+        </div>
+      </div>
+      <label for="experience">Work experience:</label>
+        <textarea id="experience" placeholder="Your work experience..."></textarea>
+    </fieldset>
+    <fieldset id="set-3">
+      <legend>
+        <span class="circle">3</span>Your profile
+      </legend>
+      <label for="role">Main Job Role:</label>
+      <input type="text" name="" value="" list="role" placeholder="Front-End Developer">
+        <datalist class="role" id="role" required>
+          <!--option value="" disabled hidden selected>Front-End Developer</option-->
+          <option value="front-end-dev">Front-End Developer</option>
+          <option value="back-end-dev">Back-End Developer</option>
+          <option value="full-stack-dev">Full-Stack Developer</option>
+          <option value="marketing">Marketing</option>
+          <option value="designer">Designer</option>
+          <option value="cm">Community Manager</option>
+          <option value="other">Other</option>
+        </datalist>
+      <label for="web">Your web:</label>
+        <input type="url" id="web" maxlength="60" placeholder="URL://">
+      <label for="summary">Summary:</label>
+        <textarea id="summary" placeholder="Talk about you..." required></textarea>
+      <label>References:</label>
+        <input type="email" id="ref-email" maxlength="40" placeholder="Contact email">
+        <input type="url" id="ref-web" maxlength="60" placeholder="Company URL">
+    </fieldset>
+    <input type="reset" id="reset" value="Reset">
+    <input type="submit" id="submit" value="Sign Up">
+    </form>
+  </div>
+  </body>
+</html>

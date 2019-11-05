@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reproductor de video</title>
+    <link rel="stylesheet" href="css/styles.css" media="all">
+  </head>
+  <body>
+    <div id="wrapper">
+      <video src="vid/bunny.mp4" type="video/mp4" id="video" controls ontimeupdate="timer()">
+        Your web browser does not support this format.
+      </video>
+      <br>
+      <button type="button" id="btnPlay" onclick="play()">Play</button>
+      <button type="button" id="btnPause" onclick="pause()">Pause</button>
+      <button type="button" id="btnStop" onclick="stop()">Stop</button>
+      <input type="range" id="rngVol" min="0" max="100" value="100" onchange="changeVol()">
+      <button type="button" id="btnMute" onclick="mute()">Mute</button>
+      <br>
+      <progress id="prgTimer" value="0" max="100"></progress>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+body{
+    font-family: 'trebuchet ms', arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5{
+    font-family: arial;
+    font-weight: 500;
+    line-height: normal;
+    color: #362c20;
+}
+#main{
+    width: 880px;
+    margin: auto;
+}
+#header{
+    border-bottom: 1px solid #3d3d3d;
+    background-color: #1d1d1d;
+}
+#logo{
+    background-color: #1d1d1d;
+    position: relative;
+}
+#logo a, #logo h2{
+    padding-left: 10px;
+}
+#logo h1{
+    margin-bottom: -10px;
+}
+#logo a{
+    font-family: 'century gothic';
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+}
+#logo h2{
+    font-size: 12px;
+    padding-bottom: 20px;
+    color: #cca799;
+}
+#menubar{
+    width: 872px;
+    height: 45px;
+    padding-right: 8px;
+    background-color: #2D2D2D;
+    border-top: 1px solid #3D3D3D;
+}
+#menubar #menu li{
+    display: inline-block;
+    float: right;
+}
+#menubar #menu li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px 10px;
+    margin-left: 10px;
+    background-color: #664133;
+}
+#menubar #menu li a:hover{
+    background-color: #cca799;
+}
+#banner{
+    margin-top: 20px;
+    width: 860px;
+    height: 180px;
+    background-image: url(banner.jpg);
+    border: 10px solid #DDD;
+}
+#site_content{
+    position: relative;
+}
+.sidebar_top{
+    margin-top: 20px;
+}
+#sidebar_container{
+    width: 200px;
+}
+.sidebar_item{
+    position: relative;
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    padding: 0 10px 5px;
+}
+.sidebar_item h3{
+    font-family: 'century gothic';
+}
+.sidebar_item h4{
+    text-transform: uppercase;
+    margin-bottom: -15px;
+    color: #cca799;
+}
+.sidebar_item h5{
+    color: darkgray;
+}
+.sidebar_item a, #content h2{
+    color: #cca799;
+}
+#content ul li, .sidebar ul li{
+    list-style-image: url(bullet.png);
+}
+#content{
+    position: absolute;
+    top: 220px;
+    left: 220px;
+}
+#content h1, #content p, #content h2{
+    padding-left: 15px;
+}
+#content ul li:empty{
+    display: none;
+}
+#footer{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
