@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Creepster', cursive;
 }
 body {
   margin: 0;
@@ -42,12 +42,53 @@ video {
 #btnEntrar {
   padding: 15px 25px;
   background-color: orange;
-  font-weight: bolder;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-variant: small-caps;
   color: black;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 99;
+}
+#gradiente {
+  background-image: radial-gradient(#ececec 90%, #858585);
+  background-repeat: no-repeat;
+  background-color: #ececec;
+}
+#principal {
+  margin: 30px auto;
+  display: grid;
+  grid-template-areas: "header header" "left0 right" "left1 right" "left2 right";
+  grid-template-columns: 682px 558px;
+  grid-template-rows: 247px repeat(3, 348px);
+  row-gap: 40px;
+  column-gap: 40px;
+  justify-content: center;
+    height: 1425px;
+}
+#principal div {
+  box-shadow: 0px 25px 0px -10px #9e9e9e85;
+}
+#principal div:nth-child(1) {
+  grid-area: header;
+  background-image: url("../img/cabecera.png");
+  background-size: cover;
+}
+#principal div:nth-child(2) {
+  grid-area: left0;
+  background-image: url("../img/izqda1.png");
+  background-size: cover;
+}
+#principal div:nth-child(3) {
+  grid-area: left1;
+  background-image: url("../img/izqda2.png");
+}
+#principal div:nth-child(4) {
+  grid-area: left2;
+  background-image: url("../img/izqda3.png");
+}
+#principal div:nth-child(5) {
+  grid-area: right;
+  background-image: url("../img/dcha.jpg");
 }
