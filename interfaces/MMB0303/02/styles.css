@@ -1,0 +1,63 @@
+/* COLORS
+teal, red, blue, orange, purple, olive, fuchsia y green
+*/
+body {
+  margin: 0 auto;
+  border: 1px solid black;
+  width: 700px;
+  padding: 5px 20px 0 10px;
+}
+#titulo {
+  color: teal;
+  margin: 0;
+}
+p strong {
+  color: red;
+}
+.destacado {
+  color: orange;
+}
+#subtitulo {
+  color: blue;
+}
+a {
+  color: red;
+  text-decoration: underline;
+}
+a > em {
+  color: blue;
+}
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+caption {
+  color: blue;
+  margin-bottom: 3px;
+}
+th.especial {
+  color: orange;
+}
+th {
+  color: red;
+}
+td {
+  color: green;
+}
+td > strong {
+  color: orange;
+}
+#adicional p {
+  color: olive;
+}
+span.especial {
+  color: purple;
+}
+#especial {
+  color: fuchsia;
+}
+#adicional a {
+  color: green;
+  text-decoration: underline;
+}
