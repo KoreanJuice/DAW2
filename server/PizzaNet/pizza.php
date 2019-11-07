@@ -25,43 +25,7 @@
   <head>
     <meta charset="utf-8">
     <title>PizzaNet</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-          rel="stylesheet">
-    <style>
-      * {
-        font-family: 'Open Sans', sans-serif;
-      }
-      body{
-        margin: 0 auto;
-        width: 800px;
-      }
-      h3{
-        font-weight: normal;
-        margin: 0px;
-        padding: 0px;
-      }
-      #red{
-        color: red;
-      }
-      input {
-        display: block;
-        margin: 5px;
-      }
-      div input{
-        width: 300px;
-      }
-      select {
-        width: 150px;
-      }
-      #pizzaSet div {
-        display: flex;
-        margin: 5px;
-      }
-      input#number {
-        height: 50px;
-        width: 70px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1>PizzaNet</h1>

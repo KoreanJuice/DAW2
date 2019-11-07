@@ -35,12 +35,12 @@
       if (isset($_SESSION['pizzanet']['pizza-tamanno'])) {
         echo "<strong>tamaño pizza: </strong>".$_SESSION['pizzanet']['pizza-tamanno']."<br>";
       }
-      
+
       if (isset($_SESSION['pizzanet']['pizza-extra'])) {
         echo "<strong>extras: </strong>".$_SESSION['pizzanet']['pizza-extra']."<br>";
-      } else {
+      } elseif ((isset($_SESSION['pizzanet']) && (!isset($_SESSION['pizzanet']['pizza-extra']))) {
         echo "<strong>extras: </strong>ninguno<br>";
-      }
+      } else { echo ""; }
 
       if (isset($_SESSION['pizzanet']['cantidad'])) {
         echo "<strong>cantidad: </strong>".$_SESSION['pizzanet']['cantidad']."<br>";
