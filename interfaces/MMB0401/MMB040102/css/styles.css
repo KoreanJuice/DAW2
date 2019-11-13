@@ -1,6 +1,10 @@
+@import url('../../fonts/Chalet.eot');
+@import url('../../fonts/Chalet.svg');
+@import url('../../fonts/Chalet.ttf');
+@import url('../../fonts/Chalet.woff');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Chalet', 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 body {
@@ -51,7 +55,7 @@ footer {
 [class*="col-"] {
   width: 100%;
 }
-/* For tablets:
+/* For tablets: */
 @media only screen and (min-width: 600px) {
   .col-m-1 {width: 8.33%;}
   .col-m-2 {width: 16.66%;}
@@ -66,7 +70,6 @@ footer {
   .col-m-11 {width: 91.66%;}
   .col-m-12 {width: 100%;}
 }
-*/
 /* For desktop: */
 @media only screen and (min-width: 1024px) {
   .col-1 {width: 8.33%;}
