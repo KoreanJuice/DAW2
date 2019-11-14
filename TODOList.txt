@@ -1,0 +1,4 @@
+server\_Entregas\CursosDisenioWeb.pdf -> ALL | dd/mm/yyyy;
+server\examen\ExamenMarcos.php -> tables with arrays | 20/11/2019;
+server\Base-MVC\index.php -> copy all 'til 15/11 | 15/11/2019*;
+client\Martinez_Blazquez_Marcos_UD_04_Tarea\main.js -> vars | 20/11/2019;
