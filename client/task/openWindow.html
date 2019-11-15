@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <h1>abrir y cerrar ventana</h1>
+  <button onclick="openEvent()" type="button">abrir</button>
+  <button onclick="closeEvent()" type="button">cerrar</button>
+  <script type="text/javascript">
+    var owo = "https://google.es";
+    function openEvent(){
+      owo = window.open("","owo");
+    }
+    function closeEvent(){
+      if(window){
+        owo.close();
+      }
+    }
+  </script>
+</body>
+</html>
