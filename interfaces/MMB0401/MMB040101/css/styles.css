@@ -1,8 +1,8 @@
-@import url('../../fonts/Chalet.eot');
-@import url('../../fonts/Chalet.svg');
-@import url('../../fonts/Chalet.ttf');
-@import url('../../fonts/Chalet.woff');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@font-face {
+  font-family: Chalet;
+  src: url('../../fonts/Chalet.ttf');
+}
 * {
   font-family: 'Chalet', 'Open Sans', sans-serif;
   box-sizing: border-box;
