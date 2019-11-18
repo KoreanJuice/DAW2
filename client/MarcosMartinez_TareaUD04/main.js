@@ -12,16 +12,24 @@ const uno = () => {
 }
 
 const dos = () => {
-  var name = prompt('introduce tu nombre');
-  var inputBirth = prompt('introduce tu fecha de nacimiento (MM/DD/YYYY)');
-  var birth = new Date(inputBirth.replace(/-/g,'/'));
-  var today = new Date();
-  if ( typeof name == "undefined" || name == null) {
-    alert("recarga la página e introduce un nombre");
-  } else if ( birth > today || isNaN(birth.getTime()) ) {
-    alert("recarga la página e introduce una fecha valida");
+  let step1 = new Date('owo');
+  let flag = isNaN(step1);
+
+  let name = prompt('introduce tu nombre');
+  let inputBirth = prompt('introduce tu fecha de nacimiento (MM/DD/YYYY)');
+  let birth = new Date(inputBirth.replace(/-/g,'/'));
+  let today = new Date();
+  if (name === '') {
+    while (name === '') {
+      name = prompt('introduce un nombre');
+    }
+  } else if (birth > today || isNaN(birth.getTime())) {
+    while (birth > today || isNaN(birth.getTime())) {
+      inputBirth = prompt('introduce una fecha valida');
+      birth = new Date (inputBirth);
+    }
   }
-  var age = calculateAge(birth);
+  let age = calculateAge(birth);
   document.body.innerHTML = `
     <p onclick="uno()">Clickea en mi!</p>
     <h1>TAREA DE JAVASCRIPT UD 04</h1>
@@ -40,8 +48,8 @@ const dos = () => {
 }
 
 const calculateAge = (birthday) => {
-  var ageDifMs = Date.now() - birthday.getTime();
-  var ageDate = new Date(ageDifMs);
+  let ageDifMs = Date.now() - birthday.getTime();
+  let ageDate = new Date(ageDifMs);
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
@@ -70,6 +78,5 @@ const getSeason = (date) => {
             season = 'otoño';
             break;
     }
-    console.log(season);
     return season;
 }
