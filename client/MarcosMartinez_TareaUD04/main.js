@@ -12,22 +12,12 @@ const uno = () => {
 }
 
 const dos = () => {
-  let step1 = new Date('owo');
-  let flag = isNaN(step1);
-
   let name = prompt('introduce tu nombre');
   let inputBirth = prompt('introduce tu fecha de nacimiento (MM/DD/YYYY)');
   let birth = new Date(inputBirth.replace(/-/g,'/'));
   let today = new Date();
   if (name === '') {
-    while (name === '') {
-      name = prompt('introduce un nombre');
-    }
-  } else if (birth > today || isNaN(birth.getTime())) {
-    while (birth > today || isNaN(birth.getTime())) {
-      inputBirth = prompt('introduce una fecha valida');
-      birth = new Date (inputBirth);
-    }
+    while (name === '') {name = prompt('introduce un nombre');}
   }
   let age = calculateAge(birth);
   document.body.innerHTML = `
