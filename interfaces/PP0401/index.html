@@ -5,77 +5,87 @@
   <title>PP0401</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#data">Me</a></li>
-      <li><a href="#video">Music video</a></li>
-      <li><a href="#contact">Contact me</a>
-        <ul>
-          <li><a href="#name">Name</a></li>
-          <li><a href="#telephone">Telephone</a></li>
-          <li><a href="#email">Email</a></li>
-          <li><a href="#summary">Summary</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <div class="row">
-    <h1 id="date">holiwi</h1>
-    <div class="col-9 col-m-">
-      <article class="">
+  <header>
+    <div class="menu_bar">
+      <a href="#">MENÚ</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#data">referencias</a></li>
+        <li><a href="#video">música</a></li>
+        <li class="submenu"><a>contáctame</a>
+          <ul class="children">
+            <li><a href="#name">nombre</a></li>
+            <li><a href="#telephone">teléfono</a></li>
+            <li><a href="#email">email</a></li>
+            <li><a href="#summary">mensaje</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="row">
+    <div class="col-12 col-m-12">
+      <article class="col-4 col-m-6">
+        <h2>owo</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </article>
+      <article class="col-4 col-m-6">
+        <h2>awa</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </article>
+      <article class="col-4 col-m-12">
+        <h2>ewe</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </article>
     </div>
 
-    <h1 id="video">Music video</h1>
-    <iframe src="https://www.youtube.com/embed/ePBjUMEeqBw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1 id="video">Música</h1>
+    <iframe src="https://www.youtube.com/embed/Gl9GtO_vQxw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <h1 id="contact">Contact me</h1>
-    <form class="col-12 col-m-12" action="index.html" method="post">
-    <fieldset id="set-1">
-      <legend>Your basic info</legend>
+    <h1 id="contact">Contáctame</h1>
+    <form class="col-12 col-m-12" action="#" method="post">
+    <fieldset>
+      <legend>Introduce tu información</legend>
       <div class="col-6 col-m-6">
-        <label for="name">Name:</label>
-          <input type="text" id="name" maxlength="25" placeholder="Name..." autofocus required>
+        <label for="name">Nombre</label>
+          <input type="text" id="name" maxlength="25" placeholder="Nombre..." required>
       </div>
       <div class="col-6 col-m-6">
-        <label for="surname">Surname:</label>
-          <input type="text" id="surname" maxlength="25" placeholder="Surname..." required>
+        <label for="surname">Apellido</label>
+          <input type="text" id="surname" maxlength="25" placeholder="Apellido..." required>
       </div>
       <div class="col-6 col-m-6">
-        <label for="telephone">Telephone:</label>
+        <label for="telephone">Teléfono:</label>
           <input type="tel" id="telephone" name="telephone" placeholder="+34 666 666 666">
       </div>
       <div class="col-6 col-m-6">
-        <label for="email">Your email:</label>
+        <label for="email">Email:</label>
           <input type="email" id="email" maxlength="35" placeholder="example@example.ex" required>
       </div>
-      <div class="col-6 col-m-6">
-        <label for="summary">Summary:</label>
-          <textarea id="summary" placeholder="Tell me something..." required></textarea>
+      <div class="col-12 col-m-12">
+        <label for="summary">Mensaje:</label>
+          <textarea id="summary" placeholder="Escríbeme algo..." required></textarea>
       </div>
     </fieldset>
-    <div class="col-12 col-m-12">
-      <input class="col-6 col-m-6" type="reset" id="reset" value="Reset">
-      <input class="col-6 col-m-6" type="submit" id="submit" value="Send">
+
+    <div class="col-12 col-m-12 buttons">
+      <input class="col-12 col-m-12" type="reset" id="reset" value="Borrar">
+      <input class="col-12 col-m-12" type="submit" id="submit" value="Enviar">
     </div>
     </form>
-
   </div>
 </body>
 </html>
-<!--
-01. Debe ser totalmente responsive: con visualización para móvil, tablet y escritorio.
-02. Tener un HTML válido con respecto a la w3c.
-03. Contenedores semánticos.
-04. Código CSS sencillo y conciso.
-05. Puedes usar pequeños toques de javascript de manera puntual para animaciones que no sean posibles con CSS.
-06. Al menos un formulario perfecto con al menos cinco campos.
-07. Menú desplegable con iconos y submenús que redirijan a la posición dentro del mismo documento.
-08. Al menos una imagen y un link a un video de youtube que se escale correctamente.
-09. Paleta de colores coherente, distribución y ubicación homogénea.
-10. Estilo general.
--->
