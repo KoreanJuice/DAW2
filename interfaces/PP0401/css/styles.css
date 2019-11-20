@@ -7,71 +7,122 @@ body {
   margin: 0;
   background-color: white;
 }
+/*  MENU JAVASRIPT */
 .menu_bar {
-  border-bottom: 1px solid black;
-  background-color: #49aacd;
+	display:none;
 }
-.menu_bar a {
-  display: block;
-  padding: .5em 1em;
-  text-decoration: none;
-  color: white;
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: 95% 50%;
-  background-image: url('../img/menu.svg');
+header {
+	width: 100%;
 }
-ul {
-  padding: 0;
+header nav {
+	background:#49aacd;
+	z-index:1000;
+	margin:20px auto;
+}
+header nav ul {
+	list-style:none;
+}
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+header nav ul li:hover {
+	background:#49aacd;
+}
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+header nav ul li a span {
+	margin-right:10px;
+}
+header nav ul li:hover .children {
+	display:block;
+}
+header nav ul li .children {
+	display: none;
+	background:#49aacd;
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+header nav ul li .children li a {
+	display: block;
+}
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+/*changes*/
+header nav {
   margin: 0;
-  list-style: none;
+  padding: 0;
 }
-nav > ul {
-  display: flex;
-  flex-direction: row;
+header nav > ul{
+  margin: 0;
 }
-nav > ul > li {
-  width: calc(100vw/4);
-  background-color: #49aacd;
-  text-align: center;
-  font-variant: small-caps;
-  font-size: 2vh;
-  border-bottom: 1px solid black;
+.children {
+  padding: 0;
 }
-nav > ul > li:first-child {
-  border-right: none;
+@media screen and (max-width: 767px) {
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#49aacd;
+	}
+	.menu_bar a {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+	header nav ul li a {
+		display: block;
+	}
+	header nav ul li:hover .children {
+		display: none;
+	}
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
 }
-nav > ul > li:not(:first-child):not(:last-child) {
-  border-left: none;
-  border-right: none;
-}
-nav > ul > li:last-child {
-  border-left: none;
-}
-ul > li:hover {
-  background-color: white;
-}
-li > ul {
-  display: none;
-  position: absolute;
-  width: calc(100vw/4);
-  border: 1px solid black;
-  border-top-width: 0;
-  border-radius: 0 0 2px 2px;
-  background-color: #49aacd;
-}
-nav > ul > li:hover ul {
-  display: block;
-}
-li > a {
-  display: block;
-  padding: .5em 0;
-  text-decoration: none;
-  color: white;
-}
-nav > ul > li:last-child > a {
-  cursor: default;
-}
+
+/*  FIN MENU */
 .row {
   display: inline-block;
   padding: 1em .75em;
@@ -110,7 +161,6 @@ label {
 }
 fieldset input {
   padding: 0 10px 0 35px;
-  width: 100%;
   height: 40px;
   border: none;
   border-radius: 2px;
@@ -130,7 +180,6 @@ input[type='email'] {
 }
 textarea {
   padding: 2px 5px;
-  width: 100%;
   height: 100px;
   resize: vertical;
   border: none;
@@ -147,11 +196,21 @@ textarea {
   background-color: #49aacd;
   cursor: pointer;
 }
-.row::after {
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #49aacd;
+}
+footer span {
+  color: white;
+}
+/*.row::after {
   content: "";
   clear: both;
   display: flex;
-}
+}*/
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
@@ -176,7 +235,7 @@ textarea {
   .buttons {display: grid;grid-gap: 5px;grid-template-areas: 'input input';}
 }
 /* For desktop: */
-@media only screen and (min-width: 1024px ) {
+@media only screen and (min-width: 1024px) {
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
