@@ -21,8 +21,8 @@ if (isset($_GET['ctl']))
           '</p></body></html>';
     exit;
   }
-} else {
-  $ruta = 'inicio';
+}else
+{ $ruta = 'inicio';
 }
 
 $controlador = $mapeoRutas[$ruta];
