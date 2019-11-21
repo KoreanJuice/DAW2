@@ -1,18 +1,18 @@
 $(document).ready(main);
 
-var contador = 1;
+let open = false;
 
 function main () {
 	$('.menu_bar').click(function(){
-		if (contador == 1) {
+		if (!open) {
 			$('nav').animate({
-				left: '0'
+				top: '10%'
 			});
-			contador = 0;
+			contador = true;
 		} else {
-			contador = 1;
+			contador = false;
 			$('nav').animate({
-				left: '-100%'
+				top: '-100%'
 			});
 		}
 	});
