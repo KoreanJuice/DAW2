@@ -6,7 +6,8 @@
         Grupo: <a href="index.php?ctl=reservar&act=<?= urlencode(serialize($value));?>"><?=$value['Grupo'] ;?></a><br>
         Día: <?=$value['Fecha'] ;?><br>
         Hora: <?=$value['Hora'] ;?><br>
-        <span title="Precio: <?= $value['Precio'] ;?>">Entradas disponibles: <?= $value['Disponibles'] ;?></span>
+        Entradas disponibles: <?= $value['Disponibles'] ;?><br>
+        Precio: <?= $value['Precio'] ;?>€<br>
     </p>
 <?php endforeach;?>
 <?php $contenido=ob_get_clean() ; include 'base.php'; ?>

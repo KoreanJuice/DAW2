@@ -2,6 +2,7 @@ server\_Entregas\CursosDisenioWeb.pdf -> ALL | dd/mm/yyyy;
 server\examen\ExamenMarcos.php -> tables with arrays | 20/11/2019;
 server\Base-MVC\index.php -> copy all 'til 15/11 | 15/11/2019*;
 < --------------------------------------------------------------->
-25-Nov -> despliegues
-03-Dic -> javascript
-10-Dic -> interfaces
+L 25-Nov -> despliegues
+M 03-Dic -> javascript
+J 05-Dic -> server
+M 10-Dic -> interfaces
