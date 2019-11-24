@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background {
+    position: relative;
+    height: 100vh;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position-x: 0;
+    animation-name: background;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes background {
+    from {background-position-x: 0;}
+    to {background-position-x: calc(100% - 100vw);}
+}
+img {
+    visibility: hidden;
+}
+.car {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-image: url('../img/car.png');
+    animation-name: car;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes car {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+.wheel1 {
+    position: absolute;
+    bottom: -6%;
+    left: 6.5%;
+    background-image: url('../img/wheel.png');
+    animation-name: wheel;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.wheel2 {
+    position: absolute;
+    bottom: -6%;
+    right: 14.5%;
+    background-image: url('../img/wheel.png');
+    animation-name: wheel;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes wheel {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
