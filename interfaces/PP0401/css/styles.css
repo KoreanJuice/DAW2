@@ -10,6 +10,7 @@ h1, h2 {
 body {
   margin: 0;
   background-color: white;
+  overflow-x: hidden;
 }
 .menu_bar {
   border-bottom: 1px solid black;
