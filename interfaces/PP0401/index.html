@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="zxx" dir="ltr">
 <head>
   <meta charset="utf-8">
   <title>PP0401</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/main.js"></script>
 </head>
 <body>
@@ -52,31 +52,38 @@
       </article>
     </div>
 
+    <h1>Galeria</h1>
+    <div class="col-m-12 galery">
+      <div class="col-4 col-m-6"><img src="https://i.imgur.com/L3S09uv.jpg" alt="01"></div>
+      <div class="col-4 col-m-6"><img src="https://i.imgur.com/tSAeumr.jpg" alt="02"></div>
+      <div class="col-4 col-m-12"><img src="https://i.imgur.com/QTPvyMx.jpg" alt="03"></div>
+    </div>
+    
     <h1 id="music">Música</h1>
-    <!-- <iframe src="https://www.youtube.com/embed/Gl9GtO_vQxw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <iframe src="https://www.youtube.com/embed/Gl9GtO_vQxw" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <h1 id="contact">Contáctame</h1>
     <form class="col-12 col-m-12" action="#" method="post">
     <fieldset>
       <legend>Introduce tu información</legend>
       <div class="col-6 col-m-6">
-        <label for="name">Nombre</label>
+        <label for="name">Nombre<span class="red">*</span></label>
           <input class="col-12 col-m-12" type="text" id="name" maxlength="25" placeholder="Nombre..." required>
       </div>
       <div class="col-6 col-m-6">
-        <label for="surname">Apellido</label>
+        <label for="surname">Apellido<span class="red">*</span></label>
           <input class="col-12 col-m-12" type="text" id="surname" maxlength="25" placeholder="Apellido..." required>
       </div>
       <div class="col-6 col-m-6">
-        <label for="telephone">Teléfono:</label>
+        <label for="telephone">Teléfono</label>
           <input class="col-12 col-m-12" type="tel" id="telephone" name="telephone" placeholder="+34 666 666 666">
       </div>
       <div class="col-6 col-m-6">
-        <label for="email">Email:</label>
+        <label for="email">Email<span class="red">*</span></label>
           <input class="col-12 col-m-12" type="email" id="email" maxlength="35" placeholder="example@example.ex" required>
       </div>
       <div class="col-12 col-m-12">
-        <label for="summary">Mensaje:</label>
+        <label for="summary">Mensaje<span class="red">*</span></label>
           <textarea  class="col-12 col-m-12" id="summary" placeholder="Escríbeme algo..." required></textarea>
       </div>
     </fieldset>
