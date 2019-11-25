@@ -24,8 +24,14 @@ function main () {
     // fix tablet to desktop nav => display: none
     $(document).ready(function(){
       $(window).resize(function(){
-        if (window.innerWidth >= 1024) {$('nav').css("display", "block");}
-        else {$('nav').css("display", "none");}
+        if (window.innerWidth >= 1024) {
+          $('nav').css("display", "block");
+          navOpen = true;
+        }
+        else {
+          $('nav').css("display", "none");
+          navOpen = false;
+        }
       });
     });
 }
