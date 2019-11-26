@@ -6,18 +6,14 @@
     <title>pagina 2</title>
   </head>
   <body>
-    <div class="">
+    <div>
       <?php
       if (isset($_COOKIE['nombre'])) {
-        echo "\$_COOKIE['nombre'] = $_COOKIE['nombre']<br>";
-      }else {
-        echo "\$_COOKIE['nombre'] = <br>";
-      }
+        echo "\$_COOKIE[\'nombre\'] =". $_COOKIE['nombre']."<br>";
+      } else {echo "\$_COOKIE['nombre'] = <br>";}
       if (isset($_COOKIE['apellido'])) {
-        echo "\$_COOKIE['apellido'] = $_COOKIE['apellido']<br>";
-      }else {
-        echo "\$_COOKIE['apellido'] = <br>";
-      }
+        echo "\$_COOKIE['apellido'] =". $_COOKIE['apellido']."<br>";
+      } else {echo "\$_COOKIE['apellido'] = <br>";}
       ?>
       <a href="cookiePagina2.php">pagina 2</a>
     </div>

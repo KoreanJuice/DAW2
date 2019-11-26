@@ -1,9 +1,6 @@
 <?php
   session_start();
   $_SESSION = array();
-  if (isset) {
-    // code...
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

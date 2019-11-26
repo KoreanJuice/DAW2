@@ -1,4 +1,5 @@
 <?php
+  /*
   class cilindroException extends Exception {
     private $errores=[];
 
@@ -9,5 +10,5 @@
     public getErrores()::array {
       return $this->errores;
     }
-  }
+  }*/
 ?>
