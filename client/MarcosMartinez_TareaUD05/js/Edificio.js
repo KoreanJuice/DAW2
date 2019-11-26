@@ -1,46 +1,49 @@
+export default class Edificio {
 
+    constructor (calle = null, numero = '0', cPostal = '0', plantas = 2, puertas = 4) {
+        this.calle = calle;
+        this.numero = numero;
+        this.cPostal = cPostal;
+        this.plantas = plantas;
+        this.agregarPlantasYPuertas(plantas, puertas);
+        /* add to html => 
+            construido nuevo edificio en calle: {calle}, nº: {numero}, CP: {cPostal}.
+        */
+    }
 
-const Edificio = (calle = 'null', numero = '0', cPostal = '0', plantas) => {
-    let calle = calle;
-    let numero = numero;
-    let cPostal = cPostal;
-    let plantas = plantas;
-    /* add to html => 
-        construido nuevo edificio en calle: {calle}, nº: {numero}, CP: {cPostal}.
-    */
-}
+    agregarPlantasYPuertas = (plantas, puertas) => {
 
-const agregarPlantasYPuertas = (plantas, puertas) => {
+    }
+    
+    modificarNumero = (numero) => {
+        this.numero = numero;
+    }
 
-}
+    modificarCodigoPostal = (codigo) => {
+        this.cPostal = codigo;
+    }
 
-const modificarNumero = (numero) => {
-    this.numero = numero;
-}
+    agregarPropietario = (nombre, planta, puerta) => {
+        
+        /* add to html => 
+            {nombre} es ahora el propietario de la puerta {puerta} de la planta {planta}.
+            (datos cualesquiera)
+        */
+    }
 
-const modificarCodigoPostal = (codigo) => {
-    this.cPostal = codigo;
-}
+    imprimeCalle = () => {
+        return this.calle;
+    }
 
-const agregarPropietario = (nombre, planta, puerta) => {
-    /* add to html => 
-        {nombre} es ahora el propietario de la puerta {puerta} de la planta {planta}.
-        (datos cualesquiera)
-    */
-}
+    imprimeNumero = () => {
+        return this.numero;
+    }
 
-const imprimeCalle = () => {
-    return this.calle;
-}
+    imprimeCodigoPostal = () => {
+        return this.cPostal;
+    }
 
-const imprimeNumero = () => {
-    return this.numero;
-}
-
-const imprimeCodigoPostal = () => {
-    return this.cPostal;
-}
-
-const imprimePlantas = () => {
-    return this.plantas;
+    imprimePlantas = () => {
+        return this.plantas;
+    }
 }
