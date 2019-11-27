@@ -12,6 +12,7 @@ setlocale(LC_ALL, 'es'); ?>
         <strong>Entradas disponibles</strong>: <?= $value['Disponibles']; ?><br>
         <strong>Precio</strong>: <?= $value['Precio']; ?>€<br>
     </details>
+    <hr>
 <?php endforeach; ?>
 <?php $contenido = ob_get_clean();
 include 'base.php'; ?>
