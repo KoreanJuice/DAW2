@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1d1d1d;
+}
+.wrapper {
+  margin: auto;
+  background-color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  background-image: url("../img/iescomercio.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 178px;
+}
+form {
+  margin-right: 50px;
+  text-align: right;
+}
+[type="text"], [type*="password"] {
+  padding: .5rem;
+}
+[type="submit"] {
+  padding: .5rem;
+  color: #0c4e89;
+  background-color: #5cb7ff;
+  border: 2px solid #1e5882;
+  border-radius: 20px;
+  cursor: pointer;
+}
+input:hover {
+  transform: rotate(15deg) scale(1.5);
+}
+.backgrounds{
+  position: relative;
+  height: 372px;
+}
+.backgrounds > img {
+  position: absolute;
+  width: 100%;
+  height: 372px;
+}
+.backgrounds > img:last-child {
+  height: 372px;
+  animation-name: backgroundz;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+@keyframes backgroundz {
+  0% {width: 0;}
+  33% {width: 0;}
+  49.5% {width: 100%;}
+  82.5% {width: 100%;}
+  100% {width: 0;}
+}
+footer {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  background: #007acd;
+}
+footer > div {
+  position: relative;
+  margin: 0 5px;
+  padding: 1rem;
+  padding-top: 75px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+h4, p {
+  position: relative;
+  z-index: 2;
+}
+footer > div > div {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 35px;
+  height: 35px;
+  transform: translate(-50%, 0);
+  background-color: #0c4e89;
+}
+footer > div:hover {
+  color: white;
+  cursor: pointer;
+  animation: textColorz ease-in-out 1s;
+}
+@keyframes textColorz {
+  from {color: black;}
+  to {color: white;}
+}
+footer > div:hover .frame {
+  transform: translate(-50%, 0) scale(10);
+  animation: framez ease-in-out 1s;
+}
+@keyframes framez {
+  from {transform: translate(-50%, 0);}
+  to {transform: translate(-50%, 0) scale(10);border-radius: 20px;}
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .wrapper {width: 1000px;}
+}
