@@ -5,12 +5,12 @@ setlocale(LC_ALL, 'es'); ?>
 <?php foreach ($actuaciones as $key => $value) : ?>
     <details>
         <summary>
-        Grupo: <a href="index.php?ctl=reservar&act=<?= urlencode(serialize($value)); ?>"><?= $value['Grupo']; ?></a><br>
+        <strong>Grupo</strong>: <a href="index.php?ctl=reservar&act=<?= urlencode(serialize($value)); ?>"><?= $value['Grupo']; ?></a><br>
         </summary>
-        Día: <?= $value['Fecha']; ?><br>
-        Hora: <?= $value['Hora']; ?><br>
-        Entradas disponibles: <?= $value['Disponibles']; ?><br>
-        Precio: <?= $value['Precio']; ?>€<br>
+        <strong>Día</strong>: <?= $value['Fecha']; ?><br>
+        <strong>Hora</strong>: <?= $value['Hora']; ?><br>
+        <strong>Entradas disponibles</strong>: <?= $value['Disponibles']; ?><br>
+        <strong>Precio</strong>: <?= $value['Precio']; ?>€<br>
     </details>
 <?php endforeach; ?>
 <?php $contenido = ob_get_clean();
