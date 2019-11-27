@@ -12,7 +12,7 @@
     $contenido que provocará que se muestre la salida del buffer dentro dicha
     página "base.php"
 */
- ?>
+?>
 <?php ob_start() ?>
 
 

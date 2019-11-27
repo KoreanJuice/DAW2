@@ -4,8 +4,8 @@ class Usuario
   private $usuario=null;
   private $pwd = false;
 
-  public function __construct(array $datos){
-    include 'UsuarioException.inc';
+  public function __construct(array $datos) {
+    include 'UsuarioException.php';
     if(!$this->setUsuario($datos['usu'])){
       throw new UsuarioException('Usuario o contraseña incorretos');
     }

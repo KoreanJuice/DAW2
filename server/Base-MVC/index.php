@@ -3,8 +3,8 @@
 session_start();
 error_reporting(E_ALL);
 
-require_once __DIR__ . '/fuente/Controlador/defaultController.inc'; /*controladores */
-require_once __DIR__ . '/app/conf/rutas.inc'; /*Ubicación del archivo de rutas*/
+require_once __DIR__ . '/fuente/Controlador/defaultController.php'; /*controladores */
+require_once __DIR__ . '/app/conf/rutas.php'; /*Ubicación del archivo de rutas*/
 
 
 // Parseo de la ruta

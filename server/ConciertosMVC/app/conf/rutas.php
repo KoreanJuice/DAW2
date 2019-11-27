@@ -17,5 +17,7 @@ $mapeoRutas =
     'inicio' => array('controller' => 'defaultController', 'action' => 'inicio'),
     'verTodosEspectaculos' => array('controller' => 'actuacionController', 'action' => 'verActuaciones'),
     'reservar' =>  array('controller' => 'reservaController', 'action' => 'reservar'),
-    'noticias' => array('controller' => 'noticiasController', 'action' => 'verNoticias') //Al ctl=noticias le indico el controlador y el metodo
+    'noticias' => array('controller' => 'noticiasController', 'action' => 'verNoticias'), //Al ctl=noticias le indico el controlador y el metodo
+    'identificacion' =>  array('controller' => 'identificacionController', 'action' => 'verIdentificacion'),
+    'registro' =>  array('controller' => 'registroController', 'action' => 'verRegistro')
   );

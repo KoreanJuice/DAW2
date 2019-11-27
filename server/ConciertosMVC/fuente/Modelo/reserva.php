@@ -10,7 +10,8 @@ class Reserva
     private $pagado = false;
 
     public function __construct(array $datos, $nuevo = true)
-    {   if ($nuevo) {
+    {
+        if ($nuevo) {
             if ($dat = $this->setDni($datos['dni'])) {
                 $errores['dni'] = $dat;
             }
@@ -18,7 +19,7 @@ class Reserva
                 $errores['localidades'] = $dat;
             }
             if (isset($errores)) {
-                require_once __DIR__ . '/reservaException.inc';
+                require_once __DIR__ . '/reservaException.php';
                 throw new ReservaException($errores, 'Reserva incorrecta');
             } else {
                 $this->setHora();
@@ -37,7 +38,7 @@ class Reserva
         }
     }
 
-    public function setDni(string $dni):string
+    public function setDni(string $dni): string
     {
         $expreg = '/^\d{8}[ABCDEFGHJKLMNPQRSTW]$/';
         $aDni = strtoupper($dni);
@@ -63,7 +64,7 @@ class Reserva
     {
         $this->idActuacion = $idAct;
     }
-    public function setLocalidades(string $entradas):string
+    public function setLocalidades(string $entradas): string
     {
         $expreg = '/^\d{1,2}$/';
         if (!preg_match($expreg, $entradas)) {
