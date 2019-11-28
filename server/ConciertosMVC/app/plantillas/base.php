@@ -34,6 +34,7 @@
       -->
     <a href="index.php?ctl=verTodosEspectaculos">Ver Actuaciones</a> |
     <a href="index.php?ctl=noticias">Noticias</a> |
+    <a href="index.php?ctl=actualizar">Actualizar espectaculos</a> |
     <a href="index.php?ctl=identificacion">Identificación</a> |
     <a href="index.php?ctl=registro">Registro</a>
     <hr>
