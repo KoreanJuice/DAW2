@@ -5,12 +5,99 @@
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
-/* ul {
-  list-style:none
+
+html {
+  background-color: #134c7e;
+  height: 100%;
+  text-align: center;
+  font-size: 3rem;
+  color: #134c7e;
 }
-.bg-img {
-  width: 1024px;
-  height: 680px;
-  background-image: url('../img/6.jpg');
-  background-repeat: no-repeat;
-} */
+
+input.set {
+  display: none;
+}
+/* direccion de las imagenes oculta */
+#slide1:checked ~ .imagenes .overflow { margin-left: 0; }
+#slide2:checked ~ .imagenes .overflow { margin-left: -100%; }
+#slide3:checked ~ .imagenes .overflow { margin-left: -200%; }
+#slide4:checked ~ .imagenes .overflow { margin-left: -300%; }
+#slide5:checked ~ .imagenes .overflow { margin-left: -400%; }
+#slide6:checked ~ .imagenes .overflow { margin-left: -500%; }
+
+#wrapper {
+  margin: 50px auto;
+  width: 80%;
+  position: relative;
+}
+
+#wrapper .imagenes {
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+}
+
+#wrapper .overflow {
+  width: 600%;
+  transition: all 0.5s ease-out;
+}
+
+#wrapper .slide {
+  position: relative;
+  width: 16.66%;
+  height: 500px;
+  line-height: 500px;
+  float: left;
+  background-color: #fff;
+}
+
+#controles {
+  width: 100%;
+}
+
+#controles label {
+  display: none;
+  width: 5%;
+  height: 60px;
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  cursor: pointer;
+  background-color: #000;
+}
+
+#controles label:hover {
+  opacity: 0.8;
+}
+
+#slide1:checked ~ #controles label:nth-child(2),
+#slide2:checked ~ #controles label:nth-child(3),
+#slide3:checked ~ #controles label:nth-child(4),
+#slide4:checked ~ #controles label:nth-child(5),
+#slide5:checked ~ #controles label:nth-child(6)
+  { right: 0; display: block; }
+
+#slide2:checked ~ #controles label:nth-child(1),
+#slide3:checked ~ #controles label:nth-child(2),
+#slide4:checked ~ #controles label:nth-child(3),
+#slide5:checked ~ #controles label:nth-child(4),
+#slide6:checked ~ #controles label:nth-child(5)
+  { left: 0; display: block; }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    max-width: 100%;
+    height: 30%;
+    font-size: .5rem;
+    line-height: normal;
+    background: rgba(255,255,255, .7);
+}
