@@ -1,72 +1,74 @@
+body {
+  background-color: #1d1d1d;
+}
 .cubo, .cubo .cara {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 .cubo .cara {
-    position: absolute;
+  position: absolute;
+  background-image: url('../img/dado.jpg');
+  background-size: 1200px;
 }
 .cubo {
-    margin: 100px auto;
-}
-.cubo .cara#superior {
-    background-color: orange;
-}
-.cubo .cara#frente {
-    background-color: red;
-}
-.cubo .cara#atras {
-    background-color: green;
-}
-.cubo .cara#derecha {
-    background-color: blue;
-}
-.cubo .cara#izquierda {
-    background-color: yellow;
-}
-.cubo .cara#inferior {
-    background-color: fuchsia;
-}
-.cubo {
-    transform-style: preserve-3d;
-}
-.cubo {
-    transform-style: preserve-3d;
-    transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
-}
-.cubo .cara#derecha {
-    transform: rotateY(90deg);
-}
-.cubo .cara#derecha {
-    transform: rotateY(90deg) translateZ(100px);;
-}
-.cubo .cara#superior {
-    background-color: orange;
-    transform: rotateX(90deg) translateZ(100px);
-}
-.cubo .cara#frente {
-    background-color: red;
-    transform: translateZ(100px);
-}
-.cubo .cara#atras {
-    background-color: green;
-    transform: translateZ(-100px);
-}
-.cubo .cara#derecha {
-    background-color: blue;
-    transform: rotateY(90deg) translateZ(100px);
-}
-.cubo .cara#izquierda {
-    background-color: yellow;
-    transform: rotateY(-90deg) translateZ(100px);
-}
-.cubo .cara#inferior {
-    background-color: fuchsia;
-    transform: rotateX(-90deg) translateZ(100px);
-}
-.cubo {
+  margin: 100px auto;
+  transform-style: preserve-3d;
+  transform: perspective(700px) rotateX(-30deg) rotateY(-30deg);
   animation: rotate 2s infinite linear;
+  animation-play-state: paused;
 }
 @keyframes rotate {
-    0% { transform: rotateX(   0deg ) rotateY(   0deg ); }
-  100% { transform: rotateX( 360deg ) rotateY( 360deg ); }
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(720deg); }
+}
+.cubo:hover {
+  animation-play-state: running;
+}
+.cubo .cara#superior {
+  background-color: orange;
+  transform: rotateX(90deg) translateZ(100px);
+  background-position: 0px 0px;
+}
+.cubo .cara#frente {
+  background-color: red;
+  transform: translateZ(100px);
+  background-position: 200px 200px;
+}
+.cubo .cara#atras {
+  background-color: green;
+  transform: translateZ(-100px);
+  background-position: 400px 400px;
+}
+.cubo .cara#derecha {
+  background-color: blue;
+  transform: rotateY(90deg) translateZ(100px);
+  background-position: 600px 600px;
+}
+.cubo .cara#izquierda {
+  background-color: yellow;
+  transform: rotateY(-90deg) translateZ(100px);
+  background-position: 800px 800px;
+}
+.cubo .cara#inferior {
+  background-color: fuchsia;
+  transform: rotateX(-90deg) translateZ(100px);
+  background-position: 1000px 1000px;
+}
+.cubo:hover .cara#superior {
+  transform: rotateX(90deg) translateZ(150px);
+}
+.cubo:hover .cara#frente {
+  transform: translateZ(150px);
+}
+.cubo:hover .cara#atras {
+  transform: translateZ(-150px);
+}
+.cubo:hover .cara#derecha {
+  transform: rotateY(90deg) translateZ(150px);
+}
+.cubo:hover .cara#izquierda {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+.cubo:hover .cara#inferior {
+  transform: rotateX(-90deg) translateZ(150px);
 }
