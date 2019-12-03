@@ -1,6 +1,5 @@
 server\_Entregas\CursosDisenioWeb.pdf -> ALL | dd/mm/yyyy;
 server\examen\ExamenMarcos.php -> tables with arrays | 20/11/2019;
 < --------------------------------------------------------------->
-M 03-Dic -> javascript
 J 05-Dic -> server
 M 10-Dic -> interfaces

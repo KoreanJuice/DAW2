@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1d1d1d;
+}
+#big {
+  margin: auto;
+  width: 600px;
+}
+.cubo, .cubo .cara {
+  width: 200px;
+  height: 600px;
+}
+.cubo .cara {
+  position: absolute;
+}
+.cubo {
+  display: inline-block;
+  margin: 200px -3px;
+  transform-style: preserve-3d;
+}
+.cubo:nth-child(1) {
+  animation: rotate 20s infinite linear;
+  /* animation-delay: 2s; */
+}
+.cubo:nth-child(2) {
+  animation: rotate 20s infinite linear;
+/*   animation-delay: 2.5s; */
+}
+.cubo:nth-child(3) {
+  animation: rotate 20s infinite linear;
+  animation-delay: 3s;
+}
+@keyframes rotate {
+  0% { transform: rotateX(-360deg); }
+  10%, 30% { transform: rotateX(-270deg); }
+  40%, 60% { transform: rotateX(-180deg); }
+  70%, 90% { transform: rotateX(-90deg); }
+  100% { transform: rotateX(-0deg); }
+}
+.cubo .cara#superior {
+  background-color: orange;
+  transform: rotateX(90deg) translateZ(300px);
+}
+.cubo .cara#frente {
+  background-color: red;
+  transform: translateZ(300px);
+}
+.cubo .cara#atras {
+  background-color: green;
+  transform: translateZ(-300px);
+}
+.cubo .cara#derecha {
+  background-color: blue;
+  transform: rotateY(90deg) translateZ(300px);
+}
+.cubo .cara#izquierda {
+  background-color: yellow;
+  transform: rotateY(-90deg) translateZ(300px);
+}
+.cubo .cara#inferior {
+  background-color: fuchsia;
+  transform: rotateX(-90deg) translateZ(300px);
+}
