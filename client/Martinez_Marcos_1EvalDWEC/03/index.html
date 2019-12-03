@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #wrapper {
+      padding: 20px;
+      width: 600px;
+      margin: auto;
+      text-align: center;
+      border: 1px solid black;
+    }
+    h1 {
+      margin: 10px 0;
+    }
+    .timer {
+      width: 50px;
+      height: 25px;
+      border: 1px solid grey;
+      margin: 0 10px;
+      padding: .25rem 1rem;
+    }
+    [type=button] {
+      margin: 10px 0;
+      padding: 5px;
+    }
+    img {
+      display: none;
+      margin: auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>hora actual</h1>
+      <span class="timer" id="horaActual"></span> : 
+      <span class="timer" id="minActual"></span> : 
+      <span class="timer" id="secActual"></span>
+      <h1>programar la alarma</h1>
+      <input type="number" name="hora" id="hora" placeholder="horas"> : 
+      <input type="number" name="min" id="min" placeholder="minutos">
+      <br>
+      <input type="button" id="activar" value="activar">
+      <input type="button" id="desactivar" value="desactivar">
+      <img id="img" src="despertador2.jpg">
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
