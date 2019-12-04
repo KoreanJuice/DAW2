@@ -1,7 +1,12 @@
 1.- Acceder con filezilla a vuestro hosting
 2.- Crear usuario que acceda solo a un directorio descargas
-3.- Aplicaciones para discos virtuales y gestion documnetal en la nube open source 
+3.- Enumera alguna aplicacion para discos virtuales y gestion documnetal en la nube que sea open source 
 4.- Instala NEXTCLOUD en el hosting , en el movil y en windows y prueaba la sincronización
 5.- Utiliza un metodo API (CLIENTE O EXTERNO) PARA OBTENER TODAS LAS CARPETAS.
 	https://docs.nextcloud.com/server/15/developer_manual/core/externalapi.html#
 	https://docs.nextcloud.com/server/15/developer_manual/client_apis/index.html
+6.- Instala proftp y  Configurar el servidor como ftp privado y/o anónimo 
+
+7.- Configura  multiples dominios
+
+8.- Configura y comprueba cuotas de usuarios
