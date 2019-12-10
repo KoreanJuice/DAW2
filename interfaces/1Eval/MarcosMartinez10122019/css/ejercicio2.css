@@ -1,0 +1,67 @@
+/*
+@author Marcos Martinez Blazquez
+@version EXAMEN 10/12/2019
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin: 2rem;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+}
+ul > li {
+  transform: skewX(25deg);
+}
+ul > li {
+  float: left;
+  position: relative;
+  background-image: radial-gradient(ellipse 100px 100px at center, #34495e, #1e2b38);
+}
+ul > li:hover {
+  background-image: radial-gradient(ellipse 100px 100px at center, #e74c3c, #ab2d20);
+}
+li > ul {
+  display: none;
+  position: absolute;
+  top: .9rem;
+  width: 10rem;
+  margin-top: 1.75rem;
+}
+li:hover ul {
+  display: block;
+}
+li > ul > li {
+  display: block;
+  left: 0px;
+}
+a {
+  color: white;
+  padding: .75rem 2rem;
+  text-decoration: none;
+  display: block;
+  transform: skewX(-25deg);
+}
+li > ul > li:nth-last-of-type(odd) {
+  transform: skewX(25deg);
+}
+li > ul > li:nth-last-of-type(odd) > a {
+  padding: 1rem 2rem;
+  width: 200px;
+  text-align: right;
+  transform: skewX(-43deg);
+}
+li > ul > li:nth-last-of-type(even) {
+  transform: skewX(-50deg);
+}
+li > ul > li:nth-last-of-type(even) > a {
+  padding: 1rem 2rem;
+  width: 200px;
+  text-align: left;
+  transform: skewX(36deg);
+}

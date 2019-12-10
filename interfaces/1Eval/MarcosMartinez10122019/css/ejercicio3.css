@@ -1,0 +1,80 @@
+/*
+@author Marcos Martinez Blazquez
+@version EXAMEN 10/12/2019
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #d56814;
+}
+.row1, .row1 a {color:#c0bab6; background-color: #333333;}
+.row2 {color:#919191; background-color: #232323;}
+.row3 {color:#979797; background-color: #ffffff;}
+.row3 a {color:#ff9900; background-color: #ffffff;}
+.row4, .row4 a {color:#919191; background-color: #232323;}
+.row2 ul {
+  list-style: none;
+  display: flex;
+}
+.row2 ul li {
+  margin: 5px;
+}
+.row2 a {
+  text-transform: uppercase;
+}
+.row3 {
+  padding: 1rem 1rem;
+}
+.row4 {
+  height: 100px;
+}
+.row4 footer {
+  padding: 1rem 0 0 1rem;
+}
+.full_width > div {
+  float: left;
+}
+.clear::after {
+  content: "";
+  clear: both;
+  display: flex;
+}
+.full_width > * {width: 100%;margin: 5px 0;}
+@media only screen and (min-width: 600px) {
+  .row3 {padding: 0;}
+}
+@media only screen and (min-width: 800px) {
+  .full_width {width: 100%;}
+  .one_half {width: 50%;}
+  .one_third {width: 33.33%;}
+  .two_third {width: 66.66%;}
+  .one_quarter {width: 25%;}
+  .two_quarter {width: 50%;}
+  .three_quarter {width: 75%;}
+  .one_sixth {width: 16.66%;}
+  .two_sixth {width: 33.33%;}
+  .three_sixth {width: 50%;}
+  .four_sixth {width: 66.66%;}
+  .five_sixth {width: 83.33%;}
+}
+@media only screen and (min-width: 1200px) {
+  .row3 {width: 1200px;margin: auto;}
+  .one_half {width: 50%;}
+  .one_third {width: 33.33%;}
+  .two_third {width: 66.66%;}
+  .one_quarter {width: 25%;}
+  .two_quarter {width: 50%;}
+  .three_quarter {width: 75%;}
+  .one_sixth {width: 16.66%;}
+  .two_sixth {width: 33.33%;}
+  .three_sixth {width: 50%;}
+  .four_sixth {width: 66.66%;}
+  .five_sixth {width: 83.33%;}
+}

@@ -1,0 +1,37 @@
+/*
+@author Marcos Martinez Blazquez
+@version EXAMEN 10/12/2019
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+table{
+  width: 100%;
+  background-color: #D6EED1;
+  border: 6px solid #24943A;
+}
+th {
+  padding: .2rem .3rem;
+  text-align: left;
+  color: white;
+  background-image: linear-gradient(#5baf6b, #3a9e4d, #24943A);
+}
+td {
+  text-align: center;
+  padding: .2rem 1.5rem;
+  border: 1px solid #24943A;
+}
+tfoot > tr > td {
+  padding: .2rem .1rem;
+  text-align: right;
+  background-image: linear-gradient(#5baf6b, #24943A);
+}
+tfoot > tr > td > div > a{
+  padding: 1px 6px;
+  color: #24943A;
+  border-radius: 4px;
+  background-color: white;
+}
