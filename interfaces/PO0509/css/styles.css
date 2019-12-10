@@ -7,10 +7,11 @@
 body {
   background-color: #1c7c50;
 }
-h1, p {
+h1, h2, h3, p {
   text-align: center;
   margin: 1rem;
 }
+
 .card {
   position: relative;
   margin: calc((50vh - 300px)/2) auto 0;
@@ -27,7 +28,6 @@ h1, p {
   transition-property: transform, opacity;
 }
 .front {
-  background-color: pink;
   transform: rotateY(0deg);
   background-image: url('../img/background1.png');
   background-repeat: no-repeat;
@@ -49,4 +49,56 @@ h1, p {
 .card:hover .back {
   opacity: 1;
   transform: rotateX(0deg);
+}
+
+.infocard {
+  position: relative;
+  margin: calc((50vh - 300px)/2) auto 0;
+  width: 300px;
+  height: 300px;
+}
+.infofront, .infoback {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+  transition-duration: .5s;
+  transition-property: transform, opacity;
+}
+.infofront {
+  position: absolute;
+  transform: rotateY(0deg);
+  background-image: linear-gradient(to right, #ffcee7, #02adad);
+  z-index: 2;
+}
+.infoback {
+  position: absolute;
+  color: white;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  background-color: #1d1d1d;
+  z-index: 1;
+  transform: rotateY(-180deg);
+}
+#infocard1:checked ~ .infofront {
+  transform: rotateY(180deg);
+}
+#infocard1:checked ~ .infoback {
+  opacity: 1;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+label {
+  display: block;
+  margin: auto;
+  width: 6rem;
+  padding: .5rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: black;
+  background-color: #ffffff8c;
+  text-align: center;
+  cursor: pointer;
 }
