@@ -4,5 +4,42 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #1d1d1d;
+  background-color: #1c7c50;
+}
+#card {
+  position: relative;
+  margin: calc((100vh - 270px)/2) auto;
+  width: 200px;
+  height: 270px;
+}
+.front, .back {
+  display: block;
+  width: 200px;
+  height: 270px;
+  background-image: url('../img/cartas.png');
+  background-size: 2600px;
+  transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+  transition-duration: .5s;
+  transition-property: transform, opacity;
+}
+.front {
+  background-position-x: 400px;
+  background-position-y: 540px;
+  transform: rotateY(0deg);
+}
+.back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  background-position-x: 600px;
+  background-position-y: 540px;
+  transform: rotateY(-180deg);
+}
+#card:hover .front {
+  transform: rotateY(180deg);
+}
+#card:hover .back {
+  opacity: 1;
+  transform: rotateY(0deg);
 }
