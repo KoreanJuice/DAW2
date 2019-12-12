@@ -47,19 +47,27 @@ a {
   display: block;
   transform: skewX(-25deg);
 }
-li > ul > li:nth-last-of-type(odd) {
-  transform: skewX(25deg);
+
+li > ul > li:nth-child(1) {
+  transform: skewX(25deg) translate(-33px, 0);
 }
-li > ul > li:nth-last-of-type(odd) > a {
+li > ul > li:nth-child(3) {
+  transform: skewX(25deg) translate(-76px, 0);
+}
+li > ul > li:nth-child(2) {
+  transform: skewX(-50deg) translate(-15px, 0);
+}
+li > ul > li:nth-child(4) {
+  transform: skewX(-50deg) translate(-65px, 0);
+}
+
+li > ul > li:nth-child(odd) > a {
   padding: 1rem 2rem;
   width: 200px;
   text-align: right;
   transform: skewX(-43deg);
 }
-li > ul > li:nth-last-of-type(even) {
-  transform: skewX(-50deg);
-}
-li > ul > li:nth-last-of-type(even) > a {
+li > ul > li:nth-child(even) > a {
   padding: 1rem 2rem;
   width: 200px;
   text-align: left;
