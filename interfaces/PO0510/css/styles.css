@@ -3,15 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-y: scroll;
+  height: 2000px;
+}
 #wrapper {
   position: relative;
+  height: 1200px;
 }
-#bg1 {
-  z-index: 0;
+#bg01, #bg02, #bg03 {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#bg2 {
-  z-index: -1;
+#bg01 {
+  background-image: url('../img/bg01.jpg');
+  z-index: 1;
 }
-#bg2 {
-  z-index: -2;
+#bg02 {
+  background-image: url('../img/bg02.png');
+  z-index: 2;
+}
+#bg03 {
+  background-image: url('../img/bg03.png');
+  z-index: 3;
 }
