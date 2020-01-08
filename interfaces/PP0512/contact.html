@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoSteam</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/f18b56e7bb.js" crossorigin="anonymous"></script>
 </head>
@@ -48,43 +48,44 @@
     </div>
 </header>
 <main>
-    <div class="branding">
-        <i class="fas fa-server"></i>
-        <h1 class="mr whiskers">InfoSteam</h1>
-        <h2>We know all your secrets.</h2>
-    </div>
-
-    <div class="big-browser col-12 col-m-12">
-        <form action="index.html" method="post">
-            <input type="text" name="big-browser" id="big-browser" minlength="2" maxlength="30" placeholder="Search...">
-        </form>
-    </div>
-
-    <div class="profile col-6 col-m-6">
-        <i class="profile-photo fas fa-file-image"></i>
-        <span class="profile-name">Profile username</span>
-        <div class="elements">
-            <div>
-                <i class="fas fa-gamepad"></i>
-                <span>258 owned games</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <span>17 games completed</span>
+    <h1></h1>
+    <form class="col-12 col-m-12" action="index.html" method="post">
+        <fieldset>
+        <div class="col-6 col-m-6">
+            <label for="name">First Name<span class="red">*</span></label>
+            <div class="relative">
+                <i class="fas fa-user"></i><input class="col-12 col-m-12" type="text" id="name" minlength="2" maxlength="25" placeholder="Name..." required>
             </div>
         </div>
-    </div>
-
-    <div class="game col-6 col-m-6">
-        <i class="game-img fas fa-file-image"></i>
-        <span class="game-name">Game name</span>
-        <i class="achivements fas fa-file-image"></i>
-        <i class="achivements fas fa-file-image"></i>
-        <i class="achivements fas fa-file-image"></i>
-        <i class="achivements fas fa-file-image"></i>
-        <i class="achivements fas fa-file-image"></i>
-        <i class="achivements fas fa-file-image"></i>
-    </div>
+        <div class="col-6 col-m-6">
+            <label for="surname">Last Name<span class="red">*</span></label>
+            <div class="relative">
+                <i class="fas fa-user"></i><input class="col-12 col-m-12" type="text" id="surname" minlength="2" maxlength="25" placeholder="Surname..." required>
+            </div>
+        </div>
+        <div class="col-6 col-m-6">
+            <label for="telephone">Telephone</label>
+            <div class="relative">
+                <i class="fas fa-phone-alt"></i><input class="col-12 col-m-12" type="tel" id="telephone" name="telephone" minlength="9" maxlength="12" placeholder="+34 666 666 666">
+            </div>
+        </div>
+        <div class="col-6 col-m-6">
+            <label for="email">Email<span class="red">*</span></label>
+            <div class="relative">
+                <i class="fas fa-envelope"></i><input class="col-12 col-m-12" type="email" id="email"  minlength="6" maxlength="35" placeholder="example@example.ex" required>
+            </div>
+        </div>
+        <div class="col-12 col-m-12">
+            <label for="summary">Why do you want to work with us?<span class="red">*</span></label>
+            <textarea  class="col-12 col-m-12" id="summary" placeholder="Write here..." minlength="12" maxlength="2000" required></textarea>
+        </div>
+        </fieldset>
+    
+        <div class="col-12 col-m-12 buttons">
+            <input class="col-6 col-m-12" type="reset" id="reset" value="Clear">
+            <input class="col-6 col-m-12" type="submit" id="submit" value="Submit">
+        </div>
+        </form>
 </main>
 </body>
 </html>

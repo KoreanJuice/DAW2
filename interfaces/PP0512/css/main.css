@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+body {
+    background-color: #1b2838;
+    color: white;
+}
+a {
+    color: #a3cf06;
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 5px #a5ca24;
+}
+header {
+    position: fixed;
+    z-index: 2;
+}
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #171a21;
+}
+ul {
+    list-style: none;
+}
+.navbar > div > ul {
+    display: flex;
+    flex-direction: row;
+}
+.navbar > div > ul > li {
+    padding: 0 .5rem;
+    background-color: #171a21;
+}
+li > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    border-top-width: 0;
+    background-color: #171a21;
+}
+.navbar > div > ul > li:hover ul {
+    display: block;
+}
+li > a {
+    display: block;
+    padding: .5rem 0;
+}
+ul > li:hover {
+    background-color: #34353a;
+}
+li > ul > li > a {
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+main {
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#browser {
+    padding: .5rem .3rem;
+    color: white;
+    border: 0;
+    background-color: #34353a;
+    outline: none;
+}
+main > div {
+    margin-bottom: 25px!important;
+}
+.branding {
+    margin: 0 auto;
+}
+.branding, .branding h1, .branding h2 {
+    text-align: center;
+}
+i, h1 {
+    font-size: 1.6rem;
+}
+.big-browser form {
+    text-align: center;
+}
+#big-browser {
+    width: 500px;
+    padding: .8rem .5rem;
+    color: white;
+    border: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #34353a;
+    outline: none;
+}
+.profile, .game {
+    position: relative;
+    height: 150px;
+    background-color: #34353a;
+    border: 1px solid #34353a;
+    border-radius: 3px;
+}
+.profile-photo, .game-img {
+    position: absolute;
+    transform: translate(40px, 100%);
+    font-size: 2rem;
+}
+.profile-name, .game-name {
+    position: absolute;
+    transform: translate(100px, 100%);
+    font-size: 1.5rem;
+}
+.elements {
+    transform: translate(35px, 90px);
+    display: flex;
+    flex-direction: row;
+}
+.elements div {
+    padding-right: 20px;
+}
+.fa-star {
+    color: yellow;
+}
+.achivements {
+    margin-right: 20px;
+    transform: translate(75px, 90px);
+    font-size: 1.5rem;
+}
+fieldset {
+    border: none;
+}
+label {
+    display: block;
+    margin: 12px 0 3px;
+}
+.red {
+    color: red;
+}
+fieldset input {
+    padding: 0 10px 0 30px;
+    height: 40px;
+    color: white;
+    border: none;
+    background-color: #34353a;
+    float: none;
+}
+.relative {
+    position: relative;
+}
+form i {
+    position: absolute;
+    z-index: 1;
+    transform: translate(7px, 75%);
+}
+textarea {
+    padding: 2px 5px;
+    height: 100px;
+    resize: vertical;
+    color: white;
+    border: none;
+    background-color: #34353a;
+}
+#submit, #reset {
+    margin-top: 10px;
+    height: 40px;
+    color: #a3cf06;
+    text-align: center;
+    border: none;
+    background-color: #171a21;
+    cursor: pointer;
+}
+/* RESPONSIVE */
+body::after {
+    content: "";
+    clear: both;
+    display: flex;
+}
+[class*="col-"] {
+    float: left;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+/* For tablets: */
+@media only screen and (min-width: 768px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+    li > ul {width: 10rem;left: initial;}
+    .right-nav .child {left: initial;right: 0;}
+    #browser {width: 300px;}
+    fieldset .col-6:nth-child(odd) {padding-right: 10px;}
+}
+/* For desktop: */
+@media only screen and (min-width: 1024px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    #browser {width: 250px;}
+    .buttons .col-6 {width: calc(50% - 5px);}
+    .buttons .col-6:nth-child(odd) {margin-right: 10px;}
+    .profile, .game {width: calc(50% - 5px);}
+    .profile {margin-right: 10px;}
+}
