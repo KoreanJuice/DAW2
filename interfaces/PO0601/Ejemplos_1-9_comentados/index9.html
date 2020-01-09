@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Trazar líneas discontinuas:</p>
+            <canvas id="trazos" width="250" height="250"></canvas>
+    <script>
+        var miCanvas=document.getElementById("trazos");
+        var contexto=miCanvas.getContext("2d");
+        
+         /*Para dibujar un triángulo. 
+         Utilizamos como siempre el método beginPath() para empezar el trazado 
+         y el método moveTo() para mover el "lapiz" hasta el origen de nuestro trazado. 
+         Esbozamos dos de los tres lados utilizando el método lineTo(), 
+         y cerramos el trazado utilizando el método closePath(). 
+         Al final hay que utilizar stroke() para marcar el trazado.*/
+        
+        contexto.lineWidth = 3;
+		contexto.strokeStyle = "#00f";
+				
+		contexto.beginPath();
+		contexto.moveTo(25, 200);
+		contexto.lineTo(125, 25);
+		contexto.lineTo(225, 200);
+		contexto.closePath();         /*cerramos el trazado utilizando el método closePath()*/
+		contexto.stroke();
+        
+    </script>
+
+</body>
+</html>

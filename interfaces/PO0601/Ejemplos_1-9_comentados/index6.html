@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Trazar líneas discontinuas:</p>
+            <canvas id="trazos" width="300" height="250"></canvas>
+    <script>
+        var miCanvas=document.getElementById("trazos");
+        var miDibujo=miCanvas.getContext("2d");
+
+        /*Podemos dibujar líneas discontinuas en <canvas> utilizando el método  setLineDash()*/
+
+        miDibujo.strokeStyle = "red";
+        miDibujo.lineWidth = 3;
+
+        miDibujo.setLineDash([4, 14]); /*define una línea compuesta por fragmentos de línea de 4px separados por espacios de 14px*/
+        miDibujo.beginPath();
+        miDibujo.moveTo(50, 50);
+        miDibujo.lineTo(250, 50);
+        miDibujo.stroke();
+
+        miDibujo.setLineDash([4, 14, 10, 16]); /*define una línea compuesta por fragmentos de línea de 4px separados por espacios de 14px otro de ancho 2px separado por espacio de 16px*/
+        miDibujo.beginPath();
+        miDibujo.moveTo(50, 75);
+        miDibujo.lineTo(250, 75);
+        miDibujo.stroke();
+
+        miDibujo.setLineDash([]); /*Para desactivar las líneas discontinuas podemos utilizar ctx.setLineDash([])*/
+        miDibujo.beginPath();
+        miDibujo.moveTo(50, 100);
+        miDibujo.lineTo(250, 100);
+        miDibujo.stroke();
+
+        /*propiedad: lineDashOffset, especifica el desplazamiento (offset) inicial*/
+        miDibujo.strokeStyle = "blue";
+        miDibujo.setLineDash([14, 4]);
+        
+        miDibujo.lineDashOffset = 0;
+        miDibujo.beginPath();
+        miDibujo.moveTo(50, 125);
+        miDibujo.lineTo(250, 125);
+        miDibujo.stroke();
+        
+        miDibujo.lineDashOffset = 9;
+        miDibujo.beginPath();
+        miDibujo.moveTo(50, 150);
+        miDibujo.lineTo(250, 150);
+        miDibujo.stroke();
+
+        /*Podemos utilizar la propiedad lineDashOffset para realizar animaciones de tipo "hormigas que marchan"*/
+                
+    </script>
+
+</body>
+</html>

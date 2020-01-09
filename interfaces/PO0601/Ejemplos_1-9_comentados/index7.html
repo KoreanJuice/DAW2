@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Limpiar el canvas con el método clearRect():</p>
+            <canvas id="lienzo" width="250" height="190" style="background-image:url(images/koala.png)"></canvas>
+    <script>
+        var miCanvas=document.getElementById("lienzo");
+        var contexto=miCanvas.getContext("2d");
+        
+        /*Para limpiar el canvas podemos utilizar el método clearRect(). 
+        Exactamente como rect() o strokeRect(), clearRect() toma cuatro atributos: x, y, anchura y altura, 
+        pero en lugar de dibujar un rectángulo, está borrando del <canvas> los pixeles situados dentro.
+
+        El método clearRect() es muy útil, especialmente en animaciones, cuando utilizamos clearRect() 
+        para limpiar el canvas entre fotogramas.*/
+        
+        contexto.fillStyle = "#ad0";
+		contexto.fillRect(50, 40, 150, 120);
+		contexto.clearRect(70, 60, 110, 80);
+        
+        /*Imagenes
+                    var img=new Image();
+					img.src = "images/koala.png";
+					img.onload = function() 
+                    {
+					   contexto.drawImage(this, 0, 0);
+                    }
+        */
+        
+    </script>
+
+</body>
+</html>

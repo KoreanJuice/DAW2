@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Trazar rayas:</p>
+        <canvas id="trazos" width="250" height="500"></canvas>
+    <script>
+        var miCanvas=document.getElementById("trazos");
+        var miDibujo=miCanvas.getContext("2d");
+
+        miDibujo.lineWidth = 25;
+		miDibujo.strokeStyle = "#00f";
+		
+        // unión en angulo: miter 
+		miDibujo.beginPath();
+		miDibujo.lineJoin = "miter";
+		miDibujo.moveTo(50, 150);
+		miDibujo.lineTo(125, 50);
+		miDibujo.lineTo(200, 150);
+		miDibujo.stroke();
+		
+        // unión redondeada: round
+		miDibujo.beginPath();
+		miDibujo.lineJoin = "round";
+		miDibujo.moveTo(50, 250);
+		miDibujo.lineTo(125, 150);
+		miDibujo.lineTo(200, 250);
+		miDibujo.stroke();
+		
+        // unión en bisel: bevel
+		miDibujo.beginPath();
+		miDibujo.lineJoin = "bevel";
+		miDibujo.moveTo(50, 350);
+		miDibujo.lineTo(125, 250);
+		miDibujo.lineTo(200, 350);
+		miDibujo.stroke();
+		
+        /*La propiedad miterLimit representa la distancia entre la parte interna y la parte externa del ángulo donde las dos líneas se encuentran. Puede tomar valores entre 1 (punta roma, aspecto biselado) y 5 (punta en angulo). */
+        /*Utilizando miterLimit=1 podemos tramsformar una punta en angulo "miter" en una punta biselada - en rojo*/ 
+        
+        // ejemplo miterLimit 
+		miDibujo.beginPath();
+		miDibujo.strokeStyle = "#f00";
+		miDibujo.lineJoin = "miter";
+		miDibujo.moveTo(50, 450);
+		miDibujo.lineTo(125, 350);
+		miDibujo.lineTo(200, 450);
+		miDibujo.miterLimit=1;
+		miDibujo.stroke();
+
+        
+    </script>
+
+</body>
+</html>

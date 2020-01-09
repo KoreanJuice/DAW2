@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #rectangulo {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Un simple rectángulo:</p>
+            <canvas id="rectangulo" width="300" height="150"></canvas>
+    <script>
+        /* Rectangulo básico */
+        var miCanvas=document.getElementById("rectangulo");  /*Define un nuevo objeto en el canvas del documento*/
+        var miDibujo=miCanvas.getContext("2d");             /*Declara una var de objeto en el elemento canvas anterior*/
+        miDibujo.fillStyle="rgb(210,210,210)";
+        miDibujo.rect(10,10,200,100);               /*Método rect para definir el rectangulo: dist-hor dist-vert (origen sup izq) ancho alto*/
+        miDibujo.shadowBlur=50;                     /*shadowBlur: define el difuminado de la sombra*/
+        miDibujo.shadowColor="black";
+        miDibujo.shadowOffsetX=10;                  /*shadowOffsetX: define la distancia horizontal*/
+        miDibujo.shadowOffsetY=10;                  /*shadowOffsetY: define la distancia vertical*/
+        miDibujo.fill();                            /*Muestra el dibujjo*/
+                                                    /*miDibujo.fillRect(10,10,200,100); hace las 2 últimas instr a la vez*/
+        
+        /* Rectangulo con color y sombra*/
+        /*
+        var miCanvas=document.getElementById("rectangulo");
+        var miDibujo=miCanvas.getContext("2d");
+        miDibujo.fillStyle="rgb(210,210,210)";      /*fillStyle: establece un relleno de color
+        miDibujo.rect(10,10,200,100);               
+        miDibujo.shadowBlur=50;                     /*shadowBlur: define el difuminado de la sombra
+        miDibujo.shadowColor="black";               /*shadowColor: define el color
+        miDibujo.shadowOffsetX=10;                  /*shadowOffsetX: define la distancia horizontal
+        miDibujo.shadowOffsetY=20;                  /*shadowOffsetY: define la distancia vertical
+        miDibujo.fill();
+        */
+    </script>
+</body>
+</html>

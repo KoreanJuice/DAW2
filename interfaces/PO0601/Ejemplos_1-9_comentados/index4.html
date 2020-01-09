@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Trazar rayas:</p>
+            <canvas id="trazos" width="300" height="250"></canvas>
+    <script>
+        var miCanvas=document.getElementById("trazos");
+        var miDibujo=miCanvas.getContext("2d");
+
+        miDibujo.lineWidth = 25;
+        miDibujo.strokeStyle = "#00f";
+		
+        // la línea de arriba con punta normal: butt
+		miDibujo.beginPath();
+		miDibujo.lineCap = "butt";
+		miDibujo.moveTo(25, 50);
+		miDibujo.lineTo(225, 50);
+		miDibujo.stroke();
+		
+        // la línea del medio con punta redondeada: round
+		miDibujo.beginPath();
+		miDibujo.lineCap = "round";
+		miDibujo.moveTo(25, 100);
+		miDibujo.lineTo(225, 100);
+		miDibujo.stroke();
+		
+        // la línea de abajo con punta cuadrada: square
+		miDibujo.beginPath();
+		miDibujo.lineCap = "square";
+		miDibujo.moveTo(25, 150);
+		miDibujo.lineTo(225, 150);
+		miDibujo.stroke();
+		
+        //las guias
+		miDibujo.beginPath();
+		miDibujo.lineWidth = 1;
+		miDibujo.strokeStyle = "#000";
+		miDibujo.moveTo(25, 25);
+		miDibujo.lineTo(25, 175);
+		miDibujo.moveTo(225, 25);
+		miDibujo.lineTo(225, 175);
+		miDibujo.stroke();	
+        
+    </script>
+
+</body>
+</html>

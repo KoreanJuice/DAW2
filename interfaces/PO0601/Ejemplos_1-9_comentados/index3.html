@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Trazar rayas:</p>
+            <canvas id="trazos" width="300" height="250"></canvas>
+    <script>
+        var miCanvas=document.getElementById("trazos");
+        var miDibujo=miCanvas.getContext("2d");
+
+        /*Para trazar rayas debemos usar el método moveTo(x,y) que determina el punto de partida del trazado*/
+        miDibujo.moveTo(50, 50);
+        /*Luego, cada segmento siguiente utilizará el método lineTo(x,y)*/
+        miDibujo.lineTo(150, 20);
+        miDibujo.lineTo(250, 100);
+        miDibujo.lineTo(20, 120);
+        /*Las propiedades lineWidth y strokeStyle determinan el grosor y el color de la línea trazada*/
+        miDibujo.lineWidth=3;
+        miDibujo.strokeStyle="darkgreen";
+        /*Termina de trazar la línea con el método stroke()*/
+        miDibujo.stroke();
+        
+        miDibujo.beginPath();
+        miDibujo.translate(.5, .5);
+        miDibujo.moveTo(20,20);
+        miDibujo.lineTo(100,60);
+        miDibujo.lineTo(40,80);
+        miDibujo.lineWidth=5;
+        miDibujo.strokeStyle="red";
+        miDibujo.stroke();
+        
+        /*Por defecto el <canvas> de HTML5 “suaviza” las líneas, y esto queda muy bien en las líneas oblicuas. Sin embargo las líneas horizontales y verticales parecen más gruesas de lo que son en realidad, podemos eludir este problema utilizando el método translate()*/
+        
+        miDibujo.lineWidth = 1;
+		miDibujo.strokeStyle = "#000";
+		//dibuja la primera línea horizontal
+		miDibujo.beginPath();
+		miDibujo.moveTo(20, 150);
+		miDibujo.lineTo(150, 150);
+        miDibujo.stroke();
+		// dibuja una segunda línea  MÁS FINA;
+		miDibujo.translate(0, .5);
+		miDibujo.beginPath();
+		miDibujo.moveTo(20, 200);
+		miDibujo.lineTo(150, 200);
+       	miDibujo.stroke();
+
+        //dibuja la primera línea vertical
+        miDibujo.beginPath();
+		miDibujo.moveTo(180, 150);
+		miDibujo.lineTo(180, 220);
+        miDibujo.stroke();
+        
+        // dibuja una segunda línea  MÁS FINA;
+		miDibujo.translate(.5, 0);
+		miDibujo.beginPath();
+		miDibujo.moveTo(200, 150);
+		miDibujo.lineTo(200, 220);
+		miDibujo.stroke();
+        
+    </script>
+
+</body>
+</html>

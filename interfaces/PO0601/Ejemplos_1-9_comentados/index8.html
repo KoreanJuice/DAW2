@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #trazos {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Trazar líneas discontinuas:</p>
+            <canvas id="trazos" width="300" height="250"></canvas>
+    <script>
+        var miCanvas=document.getElementById("trazos");
+        var context=miCanvas.getContext("2d");
+        
+         /*Podemos utilizar la propiedad lineDashOffset para realizar animaciones de tipo "hormigas que marchan"*/
+        
+        var cx = miCanvas.width/2;  /*centro horiz*/
+        var cy = miCanvas.height/2; /*centro verti*/
+        
+        context.strokeStyle = "red"
+
+        var offset = 0;
+
+function dibujarRectangulo() {
+            context.clearRect(0,0,miCanvas.width,miCanvas.height); /*Borra los píxeles especificados dentro de un rectángulo dado (miCanvas)*/
+            context.setLineDash([4, 4]);    /*Línea discontinua*/
+            context.lineDashOffset = -offset;    /*Para girar en sentico contrario -offset*/
+            context.strokeRect(cx-50,cy-50,100,100); /*Dibuja un rectángulo (x,y,anchura,altura)*/
+        }
+
+        function Animacion() {
+            offset += .5;
+            if (offset > 8) {
+                offset = 0;
+            }
+            dibujarRectangulo();
+            requestId = window.requestAnimationFrame(Animacion);
+        }
+
+        requestId = window.requestAnimationFrame(Animacion);    
+                
+        /*
+        window.requestAnimationFrame informa al navegador que quieres realizar una animación 
+        y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. 
+        El método acepta como argumento una función a la que llamar antes de efectuar el repintado.
+        
+        Sintaxis
+        requestID = window.mozRequestAnimationFrame(callback);   // Firefox
+        window.msRequestAnimationFrame(callback);                // IE 10 PP2+
+        window.webkitRequestAnimationFrame(callback[, element]); // Chrome/Webkit
+        
+        Parámetros
+        callback
+            Parámetro que especifica la función a la cual llamar llegado el momento de actualizar tu animación para el próximo repintado.
+        element [Optional]
+            Parámetro opcional (no utilizado en Firefox ni en IE) que especifica el elemento que limita visualmente toda la animación. 
+            Para canvas y WebGL, este elemento debería ser el propio elemento <canvas>. 
+            Para otros elementos, puedes omitir este parámetro o ofrecerlo para una experiencia ligeramente más optimizada.
+        Valor devuelto
+            requestID es un entero de tipo long que identifica de manera exclusiva la entrada en la lista de callbacks. 
+            Es siempre un distinto de cero, pero no debes realizar ninguna otra suposición acerca de su valor. 
+            Puedes pasar este valor a window.cancelAnimationFrame() para cancelar la petición de actualización del callback.
+        */
+        
+    </script>
+
+</body>
+</html>

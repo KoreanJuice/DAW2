@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Canvas básico</title>
+    <meta charset="UTF-8" />
+    <style>
+        #ovalo {
+        border: solid 1px #000;
+    }
+    </style>
+</head>
+<body>
+    <p>Un simple ovalo:</p>
+            <canvas id="ovalo" width="320" height="320"></canvas>
+    <script>
+        /* Circulo básico */
+        var miCanvas=document.getElementById("ovalo");
+        var miDibujo=miCanvas.getContext("2d");
+/*        var centroX=miCanvas.width/2;
+        var centroY=miCanvas.height/2;
+        
+        miDibujo.fillStyle="rgb(210,210,210)";
+        miDibujo.arc(centroX,centroY,100,0,2*Math.PI,true);      /*arc(x,y,radius,startAngle,endAngle,antiClockwise)*/
+/*        miDibujo.shadowBlur=50;
+        miDibujo.shadowColor="black";
+        miDibujo.shadowOffsetX=10;
+        miDibujo.shadowOffsetY=10;
+        miDibujo.fill();
+         
+        /*
+        x: coordenada horizontal calculada a partir del centro del óvalo.
+        y: coordenada vertical calculada a partir del centro del óvalo.
+        radius: radio del óvalo.
+        startAngle: punto de partida del arco en radianes.
+        endAngle: punto de llegada del arco en radianes.
+        antiClockwise: valor boleano indica que el arco será dibujado en el sentido de las agujas del reloj (true) o al contrario (false).
+        */
+        
+        /* Circulo básico con sombra*/
+        /*
+        var miCanvas=document.getElementById("ovalo");
+        var miDibujo=miCanvas.getContext("2d");
+        miDibujo.fillStyle="rgb(210,210,210)";
+        miDibujo.arc(100,100,80,0,2*Math.PI,true);
+        miDibujo.shadowBlur=50;
+        miDibujo.shadowColor="black";
+        miDibujo.shadowOffsetX=10;
+        miDibujo.shadowOffsetY=20;
+        miDibujo.fill();
+        */
+        
+        /*ARCOS*/
+        
+        var X = miCanvas.width/2;
+		var Y = miCanvas.height/2;
+		var r = 50;
+		var aPartida = (Math.PI / 180) * 220;
+		var aFinal =  (Math.PI / 180) * 320;
+		miDibujo.strokeStyle = "orange";
+		miDibujo.lineWidth = 15;
+		miDibujo.arc(X,Y,r,aPartida,aFinal,false);
+		miDibujo.stroke();
+        
+    </script>
+</body>
+</html>
