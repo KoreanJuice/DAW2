@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO0601</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <script src="js/script.js" defer></script> -->
+</head>
+<body>
+    <!-- EJERCICIO 01 -->
+    <p>Ej 01:</p>
+    <canvas id="uno"></canvas>
+    <script>
+        var uno = document.getElementById("uno");
+        var canvas1 = uno.getContext("2d");
+        var centroX = uno.width / 2;
+        var centroY = uno.height / 2;
+        canvas1.beginPath();
+        canvas1.arc(centroX, centroY, 40, 0, 2 * Math.PI, false);
+        canvas1.strokeStyle = "darkgreen";
+        canvas1.lineWidth = 3;
+        canvas1.fillStyle="lightgreen";
+        canvas1.fill();
+        canvas1.stroke();
+    </script>
+    <!-- EJERCICIO 02 -->
+    <p>Ej 02:</p>
+    <canvas id="dos"></canvas>
+    <script>
+        var dos = document.getElementById("dos");
+        var canvas2 = dos.getContext("2d");
+        var centroX = dos.width / 2;
+        var centroY = dos.height / 2;
+        var rad = 50;
+        var aPartida = (Math.PI / 180) * 230;
+        var aFinal =  (Math.PI / 180) * 310;
+        canvas2.beginPath();
+        canvas2.strokeStyle = "orange";
+        canvas2.lineWidth = 15;
+        canvas2.arc(centroX, centroY, rad, aPartida, aFinal, false);
+        canvas2.stroke();
+    </script>
+    <!-- EJERCICIO 03 -->
+    <p>Ej 03:</p>
+    <canvas id="tres"></canvas>
+    <script>
+        var tres = document.getElementById("tres");
+        var canvas3 = tres.getContext("2d");
+        var centroX = tres.width / 2;
+        var centroY = tres.height / 2;
+        var rad = 50;
+        var aPartida = (Math.PI / 180) * 60;
+        var aFinal =  (Math.PI / 180) * 120;
+        canvas3.beginPath();
+        canvas3.moveTo(centroX, centroY);
+        canvas3.arc(centroX, centroY, rad, aPartida, aFinal, false);
+        canvas3.lineTo(centroX, centroY);
+        canvas3.fillStyle = 'lightblue';
+        canvas3.fill();
+        canvas3.strokeStyle = "blue";
+        canvas3.lineWidth = 2;
+        canvas3.stroke();
+    </script>
+    <!-- EJERCICIO 04 -->
+    <p>Ej 04:</p>
+    <canvas id="cuatro"></canvas>
+    <script>
+        var cuatro = document.getElementById("cuatro");
+        var canvas4 = cuatro.getContext("2d");
+        canvas4.strokeStyle = "purple";
+        canvas4.beginPath();
+        canvas4.rect(10,10,200,100);
+        canvas4.stroke();
+        canvas4.beginPath();
+        var X = cuatro.width - 75;
+        var Y = cuatro.height - 50;
+        canvas4.arc(X, Y, 40, 0, 2 * Math.PI, false);
+        canvas4.stroke();
+    </script>
+    <!-- EJERCICIO 05 -->
+    <p>Ej 05:</p>
+    <canvas id="cinco"></canvas>
+    <script>
+        var cinco = document.getElementById("cinco");
+        var canvas5 = cinco.getContext("2d");
+        canvas5.strokeStyle = "blue";
+        canvas5.lineWidth = 10;
+        canvas5.beginPath();
+        var centroX = cinco.width / 2;
+        var centroY = cinco.height / 2;
+        canvas5.arc(centroX/2, centroY, 40, 0, 2 * Math.PI);
+        canvas5.scale(1, .5); // idk
+        canvas5.stroke();
+    </script>
+        <!-- EJERCICIO 06 -->
+        <p>Ej 06:</p>
+        <canvas id="seis"></canvas>
+        <script>
+            var seis = document.getElementById("seis");
+            var canvas6 = seis.getContext("2d");
+            canvas6.lineWidth = 5;
+            canvas6.beginPath();
+            var centroX = seis.width / 2;
+            var centroY = seis.height / 2;
+            canvas6.ellipse(centroX, centroY, 30, 55, 0, 0, 2 * Math.PI, false);
+            canvas6.stroke();
+        </script>
+</body>
+</html>
