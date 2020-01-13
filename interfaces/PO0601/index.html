@@ -84,13 +84,13 @@
     <script>
         var cinco = document.getElementById("cinco");
         var canvas5 = cinco.getContext("2d");
+        var centroX = cinco.width / 2;
+        var centroY = cinco.height / 2;
         canvas5.strokeStyle = "blue";
         canvas5.lineWidth = 10;
         canvas5.beginPath();
-        var centroX = cinco.width / 2;
-        var centroY = cinco.height / 2;
-        canvas5.arc(centroX/2, centroY, 40, 0, 2 * Math.PI);
         canvas5.scale(1, .5); // idk
+        canvas5.arc(centroX/2, centroY, 40, 0, 2 * Math.PI);
         canvas5.stroke();
     </script>
         <!-- EJERCICIO 06 -->
