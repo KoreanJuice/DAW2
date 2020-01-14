@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO0603</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <canvas id="smile"></canvas>
+    <script>
+        var smile = document.getElementById("smile");
+        var canvas = smile.getContext("2d");
+        var centroX = smile.width / 2;
+        var centroY = smile.height / 2;
+        canvas.strokeStyle = "black";
+        canvas.lineWidth = 2;
+
+        canvas.beginPath();
+        canvas.arc(centroX, centroY, 40, 0, 2 * Math.PI, false);
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.arc(centroX - 15, centroY - 5, 3, 0, 2 * Math.PI, false);
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.arc(centroX + 15, centroY - 5, 3, 0, 2 * Math.PI, false);
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.arc(centroX, centroY, 30, ((Math.PI / 180) * 20), ((Math.PI / 180) * 160), false);
+        canvas.stroke();
+
+    </script>
+</body>
+</html>
