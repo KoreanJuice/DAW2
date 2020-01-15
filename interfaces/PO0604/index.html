@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO0603</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <canvas id="birdo"></canvas>
+    <script>
+        var birdo = document.getElementById("birdo");
+        var canvas = birdo.getContext("2d");
+        var centroX = birdo.width / 2;
+        var centroY = birdo.height / 2;
+        canvas.strokeStyle = "transparent";
+
+        canvas.beginPath();
+        canvas.fillStyle = "#ff9900"; //orange
+        canvas.moveTo(centroX - 25, centroY - 15);
+        canvas.lineTo(centroX - 55, centroY - 5);
+        canvas.lineTo(centroX - 15, centroY + 15);
+        canvas.fill();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.fillStyle = "#ffcccc"; //pink
+        canvas.moveTo(centroX + 55, centroY + 25);
+        canvas.lineTo(centroX + 20, centroY + 30);
+        canvas.lineTo(centroX + 20, centroY );
+        canvas.fill();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.fillStyle = "#cccc99"; //green
+        canvas.moveTo(centroX + 5, centroY + 55);
+        canvas.lineTo(centroX + 15, centroY + 30);
+        canvas.lineTo(centroX + 0, centroY + 15);
+        canvas.fill();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.fillStyle = "#cccc99"; //green
+        canvas.moveTo(centroX + 15, centroY + 55);
+        canvas.lineTo(centroX + 25, centroY + 30);
+        canvas.lineTo(centroX + 10, centroY + 15);
+        canvas.fill();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.fillStyle = "#cccccc";//grey
+        canvas.arc(centroX, centroY, 40, 0, 2 * Math.PI, false);
+        canvas.fill();
+        canvas.clip();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.fillStyle = "#cccc99";//green
+        canvas.arc(centroX, centroY + 50, 40, 0, 2 * Math.PI, false);
+        canvas.fill();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.fillStyle = "#ffcccc";//pink
+        canvas.arc(centroX + 35, centroY - 10, 40, 0, 2 * Math.PI, false);
+        canvas.fill();
+        canvas.stroke();
+
+        canvas.beginPath();
+        canvas.strokeStyle = "black";
+        canvas.lineWidth = 2;
+        canvas.fillStyle = "white";
+        canvas.arc(centroX - 15, centroY - 15, 3, 0, 2 * Math.PI, false);
+        canvas.fill();
+        canvas.stroke();
+    </script>
+</body>
+</html>
