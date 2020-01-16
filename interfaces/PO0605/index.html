@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO0605</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        canvas {
+            border: 1px solid #1d1d1d;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mandala"></canvas>
+    <script>
+        var mandala = document.getElementById("mandala");
+        var ctx = mandala.getContext("2d");
+        var centroX = mandala.width / 2;
+        var centroY = mandala.height / 2;
+        var r = 30;
+        var rad = (Math.PI / 180) * 60;
+        ctx.fillStyle = "blue";
+        ctx.strokeStyle = "transparent";
+        ctx.globalCompositeOperation = "xor";
+
+        for(var i = 0; i < 6; i++){
+            ctx.beginPath();
+            var x = centroX + r * Math.cos(rad * i);
+            var y = centroY + r * Math.sin(rad * i);
+            ctx.moveTo(x, y);
+            ctx.arc(x, y, 30, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        ctx.stroke();
+    </script>
+</body>
+</html>
