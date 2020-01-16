@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO0606</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        canvas {
+            display: block;
+            margin: auto;
+            border: 1px solid #1d1d1d;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mandala" width="500" height="500"></canvas>
+    <script>
+        var mandala = document.getElementById("mandala");
+        var ctx = mandala.getContext("2d");
+        ctx.strokeStyle = "transparent";
+
+        var flowers = Math.floor(Math.random() * 75);
+        for (let j = 0; j < flowers; j++) {
+            ctx.beginPath();
+            var cX = Math.floor(Math.random() * 500);
+            var cY = Math.floor(Math.random() * 500);
+            var r = Math.floor(Math.random() * 30);
+            var rad = (Math.PI / 180) * 60;
+            var randColor = getRandomColor();
+            ctx.fillStyle = randColor;
+            for(var i = 0; i < 6; i++){
+                ctx.beginPath();
+                var x = cX + r * Math.cos(rad * i);
+                var y = cY + r * Math.sin(rad * i);
+                ctx.moveTo(x, y);
+                ctx.arc(x, y, 30, 0, 2 * Math.PI);
+                ctx.fill();
+                if (i == 5) {
+                    var randInnerColor = getRandomColor();
+                    ctx.fillStyle = randInnerColor;
+                    ctx.beginPath();
+                    ctx.moveTo(cX, cY);
+                    ctx.arc(cX, cY, 25, 0, 2 * Math.PI);
+                    ctx.fill();
+                }
+                ctx.stroke();
+            }
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
