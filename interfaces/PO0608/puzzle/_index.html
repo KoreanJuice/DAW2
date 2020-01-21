@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PO0608</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="contenedor1" ondragenter="return entrar(event)" ondragover="return encima(event)" ondrop="return soltar(event)" ondragleave="return abortar(event)">CONTENEDOR 1</div>
+    <div id="contenedor2" ondragenter="return entrar(event)" ondragover="return encima(event)" ondrop="return soltar(event)" ondragleave="return abortar(event)">CONTENEDOR 2</div>
+    <div id="contenedor3" ondragenter="return entrar(event)" ondragover="return encima(event)" ondrop="return soltar(event)" ondragleave="return abortar(event)">CONTENEDOR 3</div>
+    <div id="arrastable1" draggable="true" ondragstart="return empezar(event)" ondragend="return terminar(event)">A1</div>
+    <div id="arrastable2" draggable="true" ondragstart="return empezar(event)" ondragend="return terminar(event)">A2</div>
+    <div id="arrastable3" draggable="true" ondragstart="return empezar(event)" ondragend="return terminar(event)">A3</div>
+</body>
+</html>
