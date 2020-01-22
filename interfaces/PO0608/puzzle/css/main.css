@@ -2,27 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 body{
-    width: 800px;
-    height: 400px;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid black;
+    width: 1024px;
+    height: 720px;
+    margin: auto;
 }
-[id*='contenedor']{
-    border: 2px solid black;
-    background: grey;
-    float: left;
-    margin: 20px;
-    padding: 20px;
+[class*='c-pieza'] {
+    display: inline-block;
+    width: 330px;
+    height: 320px;
 }
-[id*='arrastable'] {
-    border: 2px solid black;
-    background: #f02323;
-    float: left;
-    margin: 20px;
-    padding: 20px;
+[class*='c-pieza']:nth-child(odd) {
+    background-color: grey;
+}
+#images * {
+    width: 150px;
 }
