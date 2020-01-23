@@ -29,7 +29,7 @@ try {
             font-weight: bold;
         }
         th {
-            text-align: right;
+            text-align: left;
             vertical-align: top;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-weight: normal;
