@@ -1,8 +1,8 @@
 <?php
 // la location es de una url puesta en el hosts en nuestro caso
 $cliente = new SoapClient(null, [
-    'location' => 'http://Bliblioteca2.edu/servicioWeb/servicio.php',
-    'uri' => 'urn:Bliblioteca2.edu/servicioWeb/servicio.php',
+    'location' => 'http://biblioteca2.edu/servicioWeb/servicio.php',
+    'uri' => 'urn:biblioteca2.edu/servicioWeb/servicio.php',
     'trace' => 1
 ]);
 try {
@@ -25,13 +25,15 @@ try {
             width: 80%;
             margin: auto;
         }
-
+        th:first-child {
+            font-weight: bold;
+        }
         th {
             text-align: right;
             vertical-align: top;
-            font-family: cursive;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: normal;
         }
-
         td {
             font-family: Verdana;
         }
