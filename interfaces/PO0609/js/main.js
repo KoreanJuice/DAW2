@@ -1,41 +1,36 @@
-let dataTransfer = new DataTransfer();
-// contenedor
-function entrar(ev) {
-    return(true);
-}
-function encima(ev) {
-    //return false;
-    var arrastableId = dataTransfer.getData("Data");
-    var contenedorId = ev.target.getAttribute('id');
-    
-    if (arrastableId === 'arrastable3' && contenedorId === 'contenedor3') {
-        return false;
-    } else if (arrastableId === 'arrastable2' && contenedorId === 'contenedor2') {
-        return false;
-    } else if (contenedorId === 'contenedor1') {
-        return false;
-    } else {
-        return true;
+let dragged;
+
+document.addEventListener("dragstart", e => {
+    dragged = e.target;
+    e.target.style.opacity = .4;
+});
+
+document.addEventListener("dragend", e => {
+    e.target.style.opacity = 1;
+});
+
+document.addEventListener("dragover", e => {
+    e.preventDefault();
+});
+
+document.addEventListener("dragenter", e => {
+    e.preventDefault();
+    if (e.target.id === 'cesta') {
+        e.target.style.background = '#caff62';
     }
-}
-function soltar(ev) {
-    var arrastableId = dataTransfer.getData("Data");
-    ev.target.appendChild(document.getElementById(arrastableId));
-    ev.stopPropagation();
-    return false;
-}
-function abortar(ev) {
-    return true;
-}
-// arrastable
-function empezar(ev) {
-    dataTransfer.effectAllowed = 'move';
-    dataTransfer.setData("Data",ev.target.getAttribute('id'));
-    dataTransfer.setDragImage(ev.target,0,0);
-    console.log(dataTransfer.setData("Data",ev.target.getAttribute('id')));
-    return true;
-}
-function terminar(ev) {
-    dataTransfer.clearData("Data");
-    return true;
-}
+});
+
+document.addEventListener("dragleave", e => {
+    e.preventDefault();
+    if (e.target.id === 'cesta') {
+        e.target.style.background = '#a9ff00';
+    }
+});
+
+document.addEventListener("drop", e => {
+    e.preventDefault();
+    if (e.target.id === 'cesta') {
+        e.target.style.background = '#a9ff00';
+        e.target.innerHTML += dragged.parentNode.nextSibling.nextElementSibling.innerHTML;
+    }
+});
