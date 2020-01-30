@@ -8,7 +8,7 @@ class configuracion
   {
     $this->dbParams = [
       "driver" => "pdo_sqlsrv", //no utilizada realmente
-      "server" => "PC20\MSSQLSERVER14", //nombre servidor
+      "server" => "(local)",//"PC20\MSSQLSERVER14", //nombre servidor
       "port" => "1433", //puerto por el que escucha las peticiones de la aplicación
       "database" => "Conciertos", //nombre de la base de datos
       "user" => null, //usuario definido para la aplicación

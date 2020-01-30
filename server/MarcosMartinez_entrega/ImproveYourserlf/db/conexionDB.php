@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../app/conf/config.php';
+require_once __DIR__ . '/app/config/config.php';// '/../app/conf/config.php';
 
-class ConexionBd
+class ConexionDB
 {
   private $con;
 
@@ -11,8 +11,7 @@ class ConexionBd
 
     try {
       $this->con = new PDO(
-                       "sqlsrv:server={$params['server']},{$params['port']};
-                            Database={$params['database']}",
+        "sqlsrv:server={$params['server']},{$params['port']};Database={$params['database']}",
         $params['user'],
         $params['pass']
       );
