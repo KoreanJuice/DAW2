@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendita</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>mi mercadito</h1>
+        <nav>
+            <ul>
+                <li><a href="">home</a></li>
+                <li class="active"><a href="">tienda</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">contáctanos</a></li>
+            </ul>
+        </nav>
+        <div id="icon-cart"></div>
+    </header>
+    <main>
+        <aside>
+            <fieldset>
+                <legend>buscador dinámico</legend>
+                <input type="text" name="search" id="search" minlength="3" maxlength="25" placeholder="Busca un producto...">
+            </fieldset>
+            <fieldset>
+                <legend>rango de precio</legend>
+                <label id="range">
+                    0€
+                    <input type="range" name="price" id="price" min="0" max="100" step="5">
+                    100€
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>productos</legend>
+                <label>
+                    <input type="checkbox" name="carne" id="carne">
+                    <span>carne</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="pescado" id="pescado">
+                    <span>pescado</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="verduras" id="verduras">
+                    <span>verduras</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="frutas" id="frutas">
+                    <span>frutas</span>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>calidad</legend>
+                <label>
+                    <input type="checkbox" name="frescos" id="frescos">
+                    <span>frescos</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="temporada" id="temporada">
+                    <span>temporada</span>
+                </label>
+                <label>
+                    <input type="checkbox" name="gourmet" id="gourmet">
+                    <span>gourmet</span>
+                </label>
+            </fieldset>
+        </aside>
+        <div id="content">
+            <div class="product p1">
+                <div>
+                    <h3 class="title">Carne temporada</h3>
+                </div>
+                <img src="img/carne.jpg" alt="carne">
+                <span class="price">5€ - lorem ipsum</span>
+            </div>
+            <div class="product p2">
+                <div>
+                    <h3 class="title">Pescado temporada</h3>
+                </div>
+                <img src="img/pescado.jpg" alt="pescado">
+                <span class="price">5€ - lorem ipsum</span>
+            </div>
+            <div class="product p3">
+                <div>
+                    <h3 class="title">Verdura temporada</h3>
+                </div>
+                <img src="img/verdura.jpg" alt="verdura">
+                <span class="price">5€ - lorem ipsum</span>
+            </div>
+            <div class="product p4">
+                <div>
+                    <h3 class="title">Fruta temporada</h3>
+                </div>
+                <img src="img/fruta.jpg" alt="fruta">
+                <span class="price">5€ - lorem ipsum</span>
+            </div>
+        </div>
+    </main>
+    <div id="cart">
+        <h2>- carro -</h2>
+    </div>
+</body>
+</html>
+<!-- Criterios de evaluación:
+
+    Debe ser totalmente responsive: con visualización para móvil y escritorio.
+    Tener un HTML válido con respecto a la w3c y Contenedores semánticos.
+    Código CSS sencillo y conciso.
+    Tener animaciones para las fichas de producto.
+    El formulario de filtros debe ser perfecto con al menos cinco campos.
+    Menú desplegable con iconos y submenús que se trasformen en menú movil.
+    Paleta de colores coherente, distribución y ubicación homogénea.
+    Estilo general.
+    El carrito debe mostrar una miniatura del producto, selección de las cantidades a comprar y cálculo de los totales.
+    Se deben poder volver a arrastrar los productos fuera del carro y al pulsar en la X para eliminarlos. -->

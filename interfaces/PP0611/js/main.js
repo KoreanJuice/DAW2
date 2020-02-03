@@ -1,3 +1,15 @@
+document.getElementById('icon-cart').addEventListener('click', e => {
+    let cart = document.getElementById('cart');
+    let cartOpen = false;
+    if (cartOpen) {
+        cart.style.display = 'none';
+        cartOpen = false;
+    } else {
+        cart.style.display = 'inline-table';
+        cartOpen = true;
+    }
+});
+
 let dragged;
 
 document.addEventListener("dragstart", e => {
@@ -15,22 +27,22 @@ document.addEventListener("dragover", e => {
 
 document.addEventListener("dragenter", e => {
     e.preventDefault();
-    if (e.target.id === 'cesta') {
-        e.target.style.background = '#caff62';
+    if (e.target.id === 'cart') {
+        e.target.style.background = '#eaeded';
     }
 });
 
 document.addEventListener("dragleave", e => {
     e.preventDefault();
-    if (e.target.id === 'cesta') {
-        e.target.style.background = '#a9ff00';
+    if (e.target.id === 'cart') {
+        e.target.style.background = 'white';
     }
 });
 
 document.addEventListener("drop", e => {
     e.preventDefault();
-    if (e.target.id === 'cesta') {
-        e.target.style.background = '#a9ff00';
+    if (e.target.id === 'cart') {
+        e.target.style.background = 'white';
         e.target.innerHTML += dragged.parentNode.nextSibling.nextElementSibling.innerHTML;
     }
 });
