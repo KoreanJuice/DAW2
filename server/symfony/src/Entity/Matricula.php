@@ -5,106 +5,62 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\MatriculaRepository")
+ * Matricula
+ *
+ * @ORM\Table(name="matricula", indexes={@ORM\Index(name="IDX_15DF188587CB4A1F", columns={"curso_id"}), @ORM\Index(name="IDX_15DF188559590C39", columns={"estudiante_id"})})
+ * @ORM\Entity
  */
 class Matricula
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\curso")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $curso;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\estudiante", inversedBy="matriculas")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $estudiante;
-
-    /**
-     * @ORM\Column(type="date")
+     * @var \DateTime
+     *
+     * @ORM\Column(name="f_matricula", type="date", nullable=false)
      */
     private $fMatricula;
 
     /**
-     * @ORM\Column(type="date")
+     * @var \DateTime
+     *
+     * @ORM\Column(name="f_inicio", type="date", nullable=false)
      */
     private $fInicio;
 
     /**
-     * @ORM\Column(type="date")
+     * @var \DateTime
+     *
+     * @ORM\Column(name="f_fin", type="date", nullable=false)
      */
     private $fFin;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    /**
+     * @var \Curso
+     *
+     * @ORM\ManyToOne(targetEntity="Curso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="curso_id", referencedColumnName="id")
+     * })
+     */
+    private $curso;
 
-    public function getCurso(): ?curso
-    {
-        return $this->curso;
-    }
+    /**
+     * @var \Estudiante
+     *
+     * @ORM\ManyToOne(targetEntity="Estudiante")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="estudiante_id", referencedColumnName="id")
+     * })
+     */
+    private $estudiante;
 
-    public function setCurso(?curso $curso): self
-    {
-        $this->curso = $curso;
 
-        return $this;
-    }
-
-    public function getEstudiante(): ?estudiante
-    {
-        return $this->estudiante;
-    }
-
-    public function setEstudiante(?estudiante $estudiante): self
-    {
-        $this->estudiante = $estudiante;
-
-        return $this;
-    }
-
-    public function getFMatricula(): ?\DateTimeInterface
-    {
-        return $this->fMatricula;
-    }
-
-    public function setFMatricula(\DateTimeInterface $fMatricula): self
-    {
-        $this->fMatricula = $fMatricula;
-
-        return $this;
-    }
-
-    public function getFInicio(): ?\DateTimeInterface
-    {
-        return $this->fInicio;
-    }
-
-    public function setFInicio(\DateTimeInterface $fInicio): self
-    {
-        $this->fInicio = $fInicio;
-
-        return $this;
-    }
-
-    public function getFFin(): ?\DateTimeInterface
-    {
-        return $this->fFin;
-    }
-
-    public function setFFin(\DateTimeInterface $fFin): self
-    {
-        $this->fFin = $fFin;
-
-        return $this;
-    }
 }

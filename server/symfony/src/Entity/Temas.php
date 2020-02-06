@@ -5,88 +5,52 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\TemasRepository")
+ * Temas
+ *
+ * @ORM\Table(name="temas", indexes={@ORM\Index(name="IDX_336D9430D710A68A", columns={"id_curso_id"})})
+ * @ORM\Entity
  */
 class Temas
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="smallint")
+     * @var int
+     *
+     * @ORM\Column(name="num_tema", type="smallint", nullable=false)
      */
     private $numTema;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\curso", inversedBy="temas")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $idCurso;
-
-    /**
-     * @ORM\Column(type="string", length=50)
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=50, nullable=false)
      */
     private $nombre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="objetivos", type="string", length=255, nullable=false)
      */
     private $objetivos;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    /**
+     * @var \Curso
+     *
+     * @ORM\ManyToOne(targetEntity="Curso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_curso_id", referencedColumnName="id")
+     * })
+     */
+    private $idCurso;
 
-    public function getNumTema(): ?int
-    {
-        return $this->numTema;
-    }
 
-    public function setNumTema(int $numTema): self
-    {
-        $this->numTema = $numTema;
-
-        return $this;
-    }
-
-    public function getIdCurso(): ?curso
-    {
-        return $this->idCurso;
-    }
-
-    public function setIdCurso(?curso $idCurso): self
-    {
-        $this->idCurso = $idCurso;
-
-        return $this;
-    }
-
-    public function getNombre(): ?string
-    {
-        return $this->nombre;
-    }
-
-    public function setNombre(string $nombre): self
-    {
-        $this->nombre = $nombre;
-
-        return $this;
-    }
-
-    public function getObjetivos(): ?string
-    {
-        return $this->objetivos;
-    }
-
-    public function setObjetivos(string $objetivos): self
-    {
-        $this->objetivos = $objetivos;
-
-        return $this;
-    }
 }
