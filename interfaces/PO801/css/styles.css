@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div > div {
+    border: 1px solid white;
+}
+.green {
+    height: 75px;
+    background-color: lightgreen;
+}
+.red {
+    background-color: red;
+}
+.violet {
+    height: 150px;
+    background-color: violet;
+}
+.orange {
+    height: 150px;
+    background-color: orange;
+}
+.blue {
+    height: 150px;
+    background-color: blue;
+}
