@@ -1,4 +1,0 @@
-Realiza un despliege de una aplicacion sencilla vuestra con php 
-en openShift.
-Tendras que instalar GIT en w7
-https://enmilocalfunciona.io/instalacion-y-configuracion-openshift-ubuntu-16-04/
