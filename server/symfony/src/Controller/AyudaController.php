@@ -19,8 +19,7 @@ class AyudaController extends AbstractController
     }
 
     /**
-     * @Route("/ayuda/{pagina}/", name="pagina")//, 
-     *          requirements={"pagina"="matricula|examen"})
+     * @Route("/ayuda/{pagina}/", name="pagina")
      */
     public function showPagina(string $pagina)
     {
@@ -43,3 +42,12 @@ class AyudaController extends AbstractController
             'nombre_metodo' => 'showCertificado',]);
     }
 }
+/*
+ * @Route("/ayuda/{pagina}/", name="pagina", 
+ *          requirements={"pagina"="matricula|examen"})
+public function showPagina(string $pagina)
+{
+    return $this->render('ayuda/' . $pagina . '.html.twig', [
+        'nombre_metodo' => 'showPagina',]);
+}
+*/
