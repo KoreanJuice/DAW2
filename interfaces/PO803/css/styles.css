@@ -9,58 +9,76 @@ div {
 }
 .header {
     height: 35px;
-    background-color: burlywood;
+    background-color: #fab082;
+    text-align: center;
 }
 .n1 {
-    height: 60px;
+    height: 4rem;
     background-color: red;
     font-size: 2.5rem;
+    text-align: left;
 }
 .n2 {
-    height: 60px;
-    background-color: aqua;
+    height: 4rem;
+    background-color: #01ffff;
     font-size: 2.5rem;
+    text-align: center;
 }
 .n3 {
-    height: 60px;
+    height: 4rem;
     background-color: red;
     font-size: 2.5rem;
+    text-align: right;
 }
-.yellow {
+.footer {
     height: 35px;
     background-color: yellow;
+    text-align: center;
 }
 @media only screen and (min-width: 576px) {
     .header {
-        background-color: aquamarine;
+        background-color: #63cdde;
+        text-align: left;
     }
     .n1 {
-        height: 75px;
+        height: 6rem;
         background-color: red;
+        text-align: left;
     }
     .n2 {
-        height: 75px;
+        height: 6rem;
         background-color: red;
+        text-align: right;
     }
     .n3 {
-        height: 40px;
-        background-color: lightgreen;
+        height: 4rem;
+        background-color: #01fa02;
+        text-align: center;
     }
 }
 @media only screen and (min-width: 768px) {
     .header {
-        background-color: greenyellow;
+        background-color: #69b843;
     }
     .n1 {
-        height: 115px;
+        height: 10rem;
         background-color: red;
+        text-align: center;
     }
     .n2 {
-        height: 115px;
+        height: 10rem;
         background-color: red;
+        text-align: center;
     }
     .n3 {
-        height: 115px;
+        height: 10rem;
         background-color: red;
+        text-align: center;
+    }
+    .footer:first-of-type {
+        text-align: right;
+    }
+    .footer:last-of-type {
+        text-align: left;
     }
 }
