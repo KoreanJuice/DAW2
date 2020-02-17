@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Curso Bootstrap</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <section class="col-12">
+            <ul class="nav nav-pills">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Equipo</a></li>
+                <li><a class="nav-link disabled" href="#">Contacto</a></li>
+            </ul>
+
+            <!-- Solución más corta -->
+
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Cursos</a>
+                <a href="#">Servicios</a>
+                <a href="#">Equipo</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+            <!-- todos el mismo espacio -->
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Cursos de programación</a>
+                <a href="#">Servicios</a>
+                <a href="#">Equipo</a>
+                <a href="#">Contacto</a>
+            </nav>
+            <!-- permite que unos sean más anchos que otros en una sola línea -->
+
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Cursos de programación</a>
+                <a href="#">Servicios</a>
+                <a href="#">Equipo</a>
+                <a href="#">Contacto</a>
+            </nav>
+            <!-- Algo que era antes realmente complicado, lo simplificamos con flexbox -->
+            <!-- montamos unos encima de otros y los convertimos en fila en el sm para el móvil -->
+
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Cursos de programación</a>
+                <a href="#">Servicios</a>
+                <a href="#">Equipo</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </section>
+    </div><!-- row -->
+</div><!-- content container -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
