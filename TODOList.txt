@@ -1,4 +1,1 @@
-server/pdf/CursosDisenioWeb.pdf,
-server/examen/ExamenMarcos.php -> html tables with arrays,
-server/pdf/ -> ordenar;
-< --------------------------------------------------------------- >
+:)
