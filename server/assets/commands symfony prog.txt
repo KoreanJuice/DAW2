@@ -1,0 +1,44 @@
+symfony new %nombreProyecto% --full
+cd %nombreProyecto%
+composer update // para saber version para el siguiente comando
+composer require laminas/laminas-code
+doctrine.yaml -> {
+    dbal:
+    dbname: CursosDisenioWebFull
+    host: (local)
+    port: 1433
+    user: null
+    password: null
+    driver: pdo_sqlsrv
+    #url: '%env(resolve:DATABASE_URL)%'
+}
+php bin/console doctrine:database:create
+php bin/console make:user (!important: usuario)
+security.yalm -> {
+
+    main:
+        anonymous: lazy
+        #provider: users_in_memory
+}
+php bin/console make:entity Estudiante {
+    ...
+    usuario
+        relation
+        Usuario
+        OneToOne
+        no
+        yes
+}
+...
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+php bin/console make:auth {
+    1
+    LoginFormAuthenticator
+}
+php bin/console make:controller DefaultController {
+    modificar DefaultController.php {
+        @Route("/default", name="default") -> @Route("/", name="homepage")
+    }
+}
+php bin/console make:registration-form
