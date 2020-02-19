@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EstudianteRepository")
@@ -47,10 +49,25 @@ class Estudiante
     private $tlfno;
 
     /**
+     * @ORM\Column(type="date")
+     */
+    private $fNacimiento;
+
+    /**
      * @ORM\OneToOne(targetEntity="App\Entity\Usuario", inversedBy="estudiante", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $usuario;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Matricula", mappedBy="idEstudiante")
+     */
+    private $matriculas;
+
+    public function __construct()
+    {
+        $this->matriculas = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -137,6 +154,49 @@ class Estudiante
     public function setUsuario(Usuario $usuario): self
     {
         $this->usuario = $usuario;
+
+        return $this;
+    }
+
+    public function getFNacimiento(): ?\DateTimeInterface
+    {
+        return $this->fNacimiento;
+    }
+
+    public function setFNacimiento(\DateTimeInterface $fNacimiento): self
+    {
+        $this->fNacimiento = $fNacimiento;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Matricula[]
+     */
+    public function getMatriculas(): Collection
+    {
+        return $this->matriculas;
+    }
+
+    public function addMatricula(Matricula $matricula): self
+    {
+        if (!$this->matriculas->contains($matricula)) {
+            $this->matriculas[] = $matricula;
+            $matricula->setEstudiante($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMatricula(Matricula $matricula): self
+    {
+        if ($this->matriculas->contains($matricula)) {
+            $this->matriculas->removeElement($matricula);
+            // set the owning side to null (unless already changed)
+            if ($matricula->getEstudiante() === $this) {
+                $matricula->setEstudiante(null);
+            }
+        }
 
         return $this;
     }

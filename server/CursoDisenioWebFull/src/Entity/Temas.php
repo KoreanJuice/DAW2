@@ -43,7 +43,6 @@ class Temas
     private $objetivos;
 
     /**
-     * @var \Curso
      *
      * @ORM\ManyToOne(targetEntity="Curso")
      * @ORM\JoinColumns({
@@ -51,6 +50,59 @@ class Temas
      * })
      */
     private $idCurso;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getNumTema(): ?int
+    {
+        return $this->numTema;
+    }
+
+    public function setNumTema(int $numTema): self
+    {
+        $this->numTema = $numTema;
+
+        return $this;
+    }
+
+    public function getNombre(): ?string
+    {
+        return $this->nombre;
+    }
+
+    public function setNombre(string $nombre): self
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    public function getObjetivos(): ?string
+    {
+        return $this->objetivos;
+    }
+
+    public function setObjetivos(string $objetivos): self
+    {
+        $this->objetivos = $objetivos;
+
+        return $this;
+    }
+
+    public function getIdCurso(): ?Curso
+    {
+        return $this->idCurso;
+    }
+
+    public function setIdCurso(?Curso $idCurso): self
+    {
+        $this->idCurso = $idCurso;
+
+        return $this;
+    }
 
 
 }

@@ -43,7 +43,6 @@ class Matricula
     private $fFin;
 
     /**
-     * @var \Curso
      *
      * @ORM\ManyToOne(targetEntity="Curso")
      * @ORM\JoinColumns({
@@ -53,7 +52,6 @@ class Matricula
     private $curso;
 
     /**
-     * @var \Estudiante
      *
      * @ORM\ManyToOne(targetEntity="Estudiante")
      * @ORM\JoinColumns({
@@ -62,5 +60,69 @@ class Matricula
      */
     private $estudiante;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getFMatricula(): ?\DateTimeInterface
+    {
+        return $this->fMatricula;
+    }
+
+    public function setFMatricula(\DateTimeInterface $fMatricula): self
+    {
+        $this->fMatricula = $fMatricula;
+
+        return $this;
+    }
+
+    public function getFInicio(): ?\DateTimeInterface
+    {
+        return $this->fInicio;
+    }
+
+    public function setFInicio(\DateTimeInterface $fInicio): self
+    {
+        $this->fInicio = $fInicio;
+
+        return $this;
+    }
+
+    public function getFFin(): ?\DateTimeInterface
+    {
+        return $this->fFin;
+    }
+
+    public function setFFin(\DateTimeInterface $fFin): self
+    {
+        $this->fFin = $fFin;
+
+        return $this;
+    }
+
+    public function getCurso(): ?Curso
+    {
+        return $this->curso;
+    }
+
+    public function setCurso(?Curso $curso): self
+    {
+        $this->curso = $curso;
+
+        return $this;
+    }
+
+    public function getEstudiante(): ?Estudiante
+    {
+        return $this->estudiante;
+    }
+
+    public function setEstudiante(?Estudiante $estudiante): self
+    {
+        $this->estudiante = $estudiante;
+
+        return $this;
+    }
 
 }

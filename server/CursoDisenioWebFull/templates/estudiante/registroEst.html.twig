@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registro estudiante{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h2>Registro estuwudiante</h2>
+    
+    {{ form(formRegistroEst)}}
+
+    {#{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword) }}
+    {{ form_row(registrationForm.agreeTerms) }#}
+    
+    <button class="btn">Register</button>
+    {#{ form_end(registrationForm) }#}
+</div>
+{% endblock %}
