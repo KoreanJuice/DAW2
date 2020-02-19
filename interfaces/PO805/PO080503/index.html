@@ -3,14 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>PO080501</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js" defer></script>
+    <title>PO080503</title>
+    <style>
+        .owo {
+            height: 50px;
+        }
+        ion-icon {
+            font-size: 1.3rem;
+        }
+        .moodleColor {
+            background-color: #00523e;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<nav id="menu" class="navbar navbar-expand-lg fixed-top navbar-dark moodleColor">
+    <a class="navbar-brand" href="#">educacion</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Español - España (es_es)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">English (en)</a>
+                    <a class="dropdown-item" href="#">Español - España (es_es)</a>
+                    <a class="dropdown-item" href="#">Español - Internacional (es)</a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <ion-icon name="notifications" class="nav-link"></ion-icon>
+            </li>
+            <li class="nav-item">
+                <ion-icon name="chatbubble" class="nav-link"></ion-icon>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="d-none d-lg-inline-block">Nombre de usuario</span>
+                    <img src="" alt=" ">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="container">
+                        <ion-icon name="chatbox" class="d-inline-block"></ion-icon>
+                        <a class="dropdown-item d-inline-block" href="#">area personal</a>
+                    </div>
+                    <a class="dropdown-item" href="#">perfil</a>
+                    <a class="dropdown-item" href="#">calificaciones</a>
+                    <a class="dropdown-item" href="#">mensajes</a>
+                    <a class="dropdown-item" href="#">preferencias</a>
+                    <a class="dropdown-item" href="#">salir</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="owo d-block w-100"></div>
+<main>
+    <h1 class="d-block d-md-none">small</h1>
+    <h1 class="d-none d-md-block d-lg-none">medium</h1>
+    <h1 class="d-none d-lg-block d-xl-none">large</h1>
+    <h1 class="d-none d-xl-block">xl</h1>
+</main>
 </body>
 </html>
