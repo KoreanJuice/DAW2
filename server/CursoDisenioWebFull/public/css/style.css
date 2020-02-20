@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+label {
+    margin-right: 10px;
+}
+header {
+    padding: .5rem 1.5rem;
+    text-align: center;
+    background-color: #1d1d1d;
+    color: white;
+}
+header * {
+    color: white;
+    text-decoration: none;
+}
+header a:hover {
+    color: #4eafff;
+}
+main {
+    padding: 1rem;
+}
+table {
+    min-width: 500px;
+    border-collapse: collapse;
+    width: 50%;
+}
+th, td {
+    padding: .5rem;
+    border: 1px solid black;
+}
+p {
+    line-height: 1.5rem;
+    text-align: justify;
+}
+input {
+    outline: none;
+}
+form * {
+    display: block;
+}
+form a {
+    color: gray;
+    text-decoration: none;
+}
+form a:hover {
+    color: #4eafff;
+}

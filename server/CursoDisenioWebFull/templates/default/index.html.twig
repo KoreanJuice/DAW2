@@ -1,14 +1,54 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Curso Diseño Web{% endblock %}
-
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
-
-<div class="example-wrapper">
-    <p>Hello {{ controller_name }}!</p>
-</div>
+<main>
+    <h1>Pagina principal</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque obcaecati quidem at officia porro quas nemo accusantium
+        aliquam fugit. Amet perferendis sunt distinctio possimus molestiae deserunt earum, quos ipsa similique.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque obcaecati quidem at officia porro quas nemo accusantium
+        aliquam fugit. Amet perferendis sunt distinctio possimus molestiae deserunt earum, quos ipsa similique.
+    </p>
+    {% if cursos %}
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Horas</th>
+            <th>Descripcion</th>
+        </tr>
+    {% for curso in cursos %}
+        <tr>
+            <td>{{ curso.nombre }}</td>
+            <td>{{ curso.horas }}</td>
+            <td>{{ curso.descripcion }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <!--table>
+        <tr>
+            <th>curso</th>
+            <th>nº Tema</th>
+            <th>Nombre</th>
+            <th>Objetivos</th>
+        </tr>
+        {#% for curso in cursos %}
+            {% for tema in curso.getTemas %}
+            {% for tema in temas %}
+                {% if tema.id_curso_id == curso.id %}
+                <tr>
+                    <td>{{ curso.nombre }}</td>
+                    <td>{{ tema.num_tema }}</td>
+                    <td>{{ tema.nombre }}</td>
+                    <td>{{ tema.objetivos }}</td>
+                </tr>
+                {% endif %}
+            {% endfor %}
+        {% endfor %#}
+    </table-->
+    
+    {% endif %}
+</main>
 {% endblock %}

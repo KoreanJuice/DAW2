@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Registro estudiante{% endblock %}
+{% block title %}Student register{% endblock %}
 
 {% block body %}
 <style>
@@ -9,16 +9,26 @@
 </style>
 
 <div class="example-wrapper">
-    <h2>Registro estuwudiante</h2>
+    <h2>Student register</h2>
     
-    {{ form(formRegistroEst)}}
+    {{ form_start(formRegistroEst)}}
+        {{ form_row(formRegistroEst.nombre) }}
+        {{ form_row(formRegistroEst.apellidos) }}
+        {{ form_row(formRegistroEst.calle) }}
+        {{ form_row(formRegistroEst.provincia) }}
+        {{ form_row(formRegistroEst.cp) }}
+        {{ form_row(formRegistroEst.tlfno) }}
+        {{ form_row(formRegistroEst.fNacimiento)}}
+        {{ form_row(formRegistroEst.submit) }}
+    <!--<button class="btn">Register</button>-->
+    {{ form_end(formRegistroEst) }}
 
-    {#{ form_start(registrationForm) }}
-    {{ form_row(registrationForm.email) }}
-    {{ form_row(registrationForm.plainPassword) }}
-    {{ form_row(registrationForm.agreeTerms) }#}
+    {#{ form_start(registrationForm) }#}
+        {#{ form_row(registrationForm.email) }#}
+        {#{ form_row(registrationForm.plainPassword) }#}
+        {#{ form_row(registrationForm.agreeTerms) }#}
     
-    <button class="btn">Register</button>
+    <!--<button class="btn">Register</button>-->
     {#{ form_end(registrationForm) }#}
 </div>
 {% endblock %}

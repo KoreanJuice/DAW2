@@ -4,16 +4,20 @@
         <meta charset="UTF-8">
         <title>{% block title %}Curso Diseño Web{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <header>
             <h1>Improve Yourself</h1>
             <nav>
                 <a href="{{ path('homepage') }}">Home</a> | 
+                {% if not app.user %}
                 <a href="{{ path('app_login') }}">Log in</a> | 
-                <a href="{{ path('app_register') }}">Sign up</a> |
-                <a href="{{ path('registroEst') }}">Registro estudiante</a>
-                <!--a href="{{ path('app_logout') }}">Log out</a-->
+                <a href="{{ path('app_register') }}">Sign up</a> 
+                {% else %}
+                <a href="{{ path('app_logout') }}">Log out</a> | 
+                <a href="{{ path('registroEst') }}">Student sign up</a>
+                {% endif %}
             </nav>
         </header>
         {% block body %}{% endblock %}
