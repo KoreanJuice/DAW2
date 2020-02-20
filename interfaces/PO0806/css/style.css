@@ -1,0 +1,38 @@
+.card-flip {
+    perspective: 1000px;
+}
+
+.card-flip:hover .flip, .card-flip.hover .flip {
+    transform: rotateY(180deg);
+}
+
+.card-flip, .front, .back {
+    height: 480px;
+}
+
+.flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-text, .back {
+    overflow: auto;
+}
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    padding: 5px 10px;
+    border: 1px solid #80808080;
+    border-radius: 3px;
+    transform: rotateY(180deg);
+}
