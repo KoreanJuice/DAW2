@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
     <script src="https://kit.fontawesome.com/f18b56e7bb.js" crossorigin="anonymous" defer></script>
-    <title>Home</title>
+    <title>Formulario</title>
 </head>
 
 <body>
@@ -60,51 +60,61 @@
         <div class="nav-margin d-block w-100"></div>
     </header>
 
-    <main class="container-fluid row m-0 mt-2">
-        <article class="col-12 mt-2 text-justify">
-            <h1>¿Quiénes somos?</h1>
-            <p class="m-0">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, quos illo? Nobis veritatis officia
-                libero dicta pariatur eaque, omnis commodi? Minus consequatur autem laudantium, id nihil alias
-                blanditiis delectus repellendus modi inventore mollitia libero ea qui eius suscipit tempora neque
-                similique, eaque saepe, consectetur sed nobis provident quibusdam. Cum, maxime?
-            </p>
-        </article>
-        <article class="col-12 col-md-6 col-xl-4 mt-2 text-justify">
-            <h1>Datos personales</h1>
-            <p class="m-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, adipisci magnam molestiae excepturi,
-                repellat atque, minima eaque quidem incidunt voluptates deleniti voluptatum officiis aspernatur libero
-                laboriosam. Numquam itaque similique corrupti. Velit ab sapiente consequatur voluptates libero voluptate
-                accusantium debitis, in commodi id, architecto facilis delectus dolores at non facere corporis.
-            </p>
-        </article>
-        <article class="col-12 col-md-6 col-xl-4 mt-2 text-justify">
-            <h1>Estudios</h1>
-            <p class="m-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, adipisci magnam molestiae excepturi,
-                repellat atque, minima eaque quidem incidunt voluptates deleniti voluptatum officiis aspernatur libero
-                laboriosam. Numquam itaque similique corrupti. Velit ab sapiente consequatur voluptates libero voluptate
-                accusantium debitis, in commodi id, architecto facilis delectus dolores at non facere corporis.
-            </p>
-        </article>
-        <article class="col-12 col-md-12 col-xl-4 mt-2 text-justify">
-            <h1>Experiencia laboral</h1>
-            <p class="m-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, adipisci magnam molestiae excepturi,
-                repellat atque, minima eaque quidem incidunt voluptates deleniti voluptatum officiis aspernatur libero
-                laboriosam. Numquam itaque similique corrupti. Velit ab sapiente consequatur voluptates libero voluptate
-                accusantium debitis, in commodi id, architecto facilis delectus dolores at non facere corporis.
-            </p>
-        </article>
-        <div class="container-fluid row justify-content-center m-0 p-0">
-            <section class="col-12 col-md-8 col-xl-6 mt-4 mb-4 justify-content-center">
-                <h1 id="music">Música</h1>
-                <iframe src="https://www.youtube.com/embed/Gl9GtO_vQxw"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </section>
-        </div>
+    <main class="container mt-2">
+        <h1 class="pt-2" style="text-align: center;">Log in - administradión</h1>
+        <form action="admin.html" class="col-12 mt-4" method="POST">
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input required type="email" class="form-control" id="inputEmail3" minlength="5" maxlength="60"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input required type="password" class="form-control" id="inputPassword3" minlength="8"
+                        maxlength="32" required>
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">¿Admin?</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input required class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Sí
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input required class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-group row">
+                <div class="col-sm-2">Checkbox</div>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Acepto este formulario
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 ml-auto">
+                    <button type="submit" class="btn btn-primary" id="redirect">Enviar</button>
+                </div>
+            </div>
+        </form>
     </main>
 
     <footer

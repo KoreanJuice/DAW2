@@ -1,0 +1,51 @@
+main.container-fluid {
+    margin: 0;
+    height: 90vh;
+    background: #DCF5FF!important;
+}
+
+.nav a{
+    color: white;
+}
+
+.inner {
+    padding: 1em;
+    height: 85%;
+    border-radius: .5rem;
+    background: #117C8D;
+    clip-path: circle(3% at 92.95% 5.6%);
+    transition: all .5s ease-in-out;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.inner:hover {
+    clip-path: circle(75%);
+    background: #117C8D;
+}
+
+.inner:hover span {
+    color: #ffffff00;
+}
+
+.inner h1 {
+    color: white;
+    margin: 0;
+}
+
+.text {
+    color: black;
+    border-radius: .5rem;
+    font-size: .8rem;
+    background-color: #DCF5FF;
+    overflow: auto;
+}
+
+.inner span {
+    float: right;
+    color: white;
+    font-weight: bold;
+    transition: color .5s;
+    position: relative;
+    margin-right: 4%;
+}
