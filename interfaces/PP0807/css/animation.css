@@ -24,9 +24,9 @@ main.container-fluid {
     background: #117C8D;
 }
 
-.inner:hover span {
+/*.inner:hover span i, span:hover i, i:hover {
     color: #ffffff00;
-}
+}*/
 
 .inner h1 {
     color: white;
@@ -42,10 +42,14 @@ main.container-fluid {
 }
 
 .inner span {
+    position: absolute;
+    top: calc(0% + 5px);
+    left: calc(25% - 200px);
     float: right;
     color: white;
     font-weight: bold;
     transition: color .5s;
     position: relative;
     margin-right: 4%;
+    z-index: 10000;
 }
