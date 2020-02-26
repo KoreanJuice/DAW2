@@ -14,10 +14,12 @@
     </header>
     <hr>
     <nav>
-        <a href="#">Inicio</a> | 
-        <a href="#">Ver libros</a> | 
-        <a href="#">Log in</a> | 
-        <a href="#">Sign up</a>
+        <a href="#">Inicio</a> |
+        <a href="#">Ver libros</a> |
+        <a href="#">Recoger libro</a> |
+        <a href="#">Devolver libro</a> |
+        <a href="#">Log in</a> |
+        <a href="#">Registrarse</a>
     </nav>
     <hr>
     <div id="contenido">
@@ -26,7 +28,7 @@
     <hr>
     <footer>
         <p style="text-align: center;">
-            - Pie de página -    
+            - Pie de página -
         </p>
     </footer>
 </body>
