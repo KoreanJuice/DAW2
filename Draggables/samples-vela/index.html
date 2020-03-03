@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="draggable.js"></script>
+    <style>
+        #drag {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #drop {
+            width: 400px;
+            min-height: 200px;
+            background-color: black;
+        }
+
+        #drag2 {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #drop2 {
+            width: 400px;
+            min-height: 200px;
+            background-color: black;
+        }
+
+        #drag3 {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #drop3 {
+            width: 400px;
+            min-height: 200px;
+            background-color: pink;
+        }
+        #drag4 {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #drop4 {
+            width: 400px;
+            min-height: 200px;
+            background-color: blue;
+        }
+
+        #drag5 {
+            width: 300px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+
+        #drop5 {
+            width: 400px;
+            min-height: 200px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+
+<div id="drag"></div>
+<div id="drop"></div>
+
+<div id="drag2"></div>
+<div id="drop2"></div>
+
+<div id="drag3"> tonto</div>
+<div id="drop3"></div>
+
+<div id="drag4"></div>
+<div id="drop4"></div>
+
+<div id="drag5"></div>
+<div id="drop5"></div>
+<script>
+    let drag = document.getElementById("drag");
+    let drop = document.getElementById("drop");
+
+    let drag2 = document.getElementById("drag2");
+    let drop2 = document.getElementById("drop2");
+
+    let drag3 = document.getElementById("drag3");
+    let drop3 = document.getElementById("drop3");
+
+    let drag4 = document.getElementById("drag4");
+    let drop4 = document.getElementById("drop4");
+
+    let drag5 = document.getElementById("drag5");
+    let drop5 = document.getElementById("drop5");
+
+    jugacu.draggable(drag, [{
+            container: drop
+        }]
+    );
+
+    jugacu.draggable(drag2, [{
+            container: drop2
+        }]
+        , {
+            ghostMode: true
+        });
+
+    jugacu.draggable(drag3, [{
+            container: drop3,
+            condition: (ev,elemento,container) =>{
+                container.innerHTML+=elemento.innerHTML;
+                // evitar que se dropee
+                return false;
+            },
+            onHover: (container,elemento) =>{
+                elemento.style.backgroundColor="yellow";
+            }
+        }]
+        , {
+            ghostMode: true
+        });
+
+    jugacu.draggable(drag4, [{
+            container: drop4,
+            onHover: (container, elemento) => {
+                elemento.style.backgroundColor="yellow";
+            },
+            onDrop: (container, elemento) => {
+                elemento.style.backgroundColor="red";
+            }
+        }]
+        , {
+            ghostMode: true
+        });
+
+    jugacu.draggable(drag5, [{
+            container: drop5,
+            onHover: (container, elemento) => {
+                elemento.style.backgroundColor="yellow";
+            },
+            onDrop: (container, elemento) => {
+                elemento.style.backgroundColor="red";
+            }
+        }]
+        , {
+            ghostMode: true,
+            ghostCanDrag: true
+        });
+
+</script>
+</body>
+</html>
