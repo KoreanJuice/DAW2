@@ -1,0 +1,135 @@
+/*
+@author Marcos Martinez
+@version EXAMEN 3 de marzo 2020
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.row1, .row2, .row3 {
+    width: 100%;
+}
+
+.row1, .row3 {
+    padding: 2rem;
+    background-color: #333333;
+}
+
+header {
+    margin: auto;
+    max-width: 1200px;
+    color: #c1bbb8;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header a {
+    color: #c1bbb8;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+li a {
+    display: inline-block;
+    padding: .75rem;
+    background-color: #232323;
+    text-transform: uppercase;
+}
+
+#container {
+    margin: auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+#container a {
+    color: coral;
+}
+
+#slider a img {
+    width: 100%;
+}
+
+img {
+    object-fit: cover;
+}
+
+#services {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+#services article {
+    width: 100%;
+}
+
+article {
+    width: 100%;
+}
+
+.more, figcaption {
+    text-align: right;
+}
+
+#latest {
+    margin-top: 2rem;
+}
+
+figure ul {
+    display: block;
+}
+
+figure ul li img {
+    width: 100%;
+}
+
+.one_third {
+    width: 100%;
+}
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    color: #c1bbb8;
+}
+
+footer a {
+    text-decoration: none;
+    color: #c1bbb8;
+}
+
+@media only screen and (min-width: 1200px) {
+    #services {
+        display: flex;
+    }
+
+    .one_quarter {
+        max-width: 25%;
+    }
+
+    figure ul {
+        display: flex;
+    }
+
+    figure ul li img {
+        width: 290px;
+    }
+
+    .one_third {
+        text-align: center;
+        width: 33.3%;
+    }
+}

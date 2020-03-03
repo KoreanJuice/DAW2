@@ -1,0 +1,42 @@
+/*
+@author Marcos Martinez
+@version EXAMEN 3 de marzo 2020
+*/
+img {
+    object-fit: cover;
+}
+
+header {
+    color: #c1bbb8;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+header a {
+    color: #c1bbb8;
+}
+
+ul {
+    display: flex;
+}
+
+li a {
+    display: inline-block;
+    padding: .75rem;
+    background-color: #232323;
+    text-transform: uppercase;
+}
+
+#container a {
+    color: coral;
+}
+
+footer {
+    color: #c1bbb8;
+}
+
+footer a {
+    color: #c1bbb8;
+}

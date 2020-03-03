@@ -1,0 +1,41 @@
+<!--
+/*
+@author Marcos Martinez
+@version EXAMEN 3 de marzo 2020
+*/
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ejercicio2.css">
+    <script src="../Draggables/src/draggable.js"></script>
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <div id="black" class="black"></div>
+    <div id="white" class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    <script>
+        const black = document.querySelector('#black');
+        const white = document.querySelector('#white');
+
+        jugacu.draggable(black, [
+            {
+                container: white
+            }
+        ],
+            {
+                ghostMode: true
+            }
+        );
+    </script>
+</body>
+</html>
