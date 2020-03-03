@@ -1,89 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <link rel="stylesheet" href="css/main.css">
-    <!--<script src="js/main.js" defer></script>-->
-    <script src="../../Draggables/src/draggable.js" defer></script>
+    <!--<script src="js/main.js" defer></!--<script>-->
+    <script src="../../Draggables/src/draggable.js"></script>
 </head>
+
 <body>
-<div id="principal">
-    <h1>TIENDA ONLINE</h1>
-    <div id="productos">
-        <table>
-            <tr>
-                <th>IMAGEN</th>
-                <th>DESCRIPCIÓN</th>
-                <th>PRECIO</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="img/dell.jpg" id="p1">
-                </td>
-                <td>
-                    <h4>Ordenador DELL</h4>
-                </td>
-                <td>
-                    <h4>987€</h4>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="img/sony.jpg" id="p2">
-                </td>
-                <td>
-                    <h4>Ordenador SONY</h4>
-                </td>
-                <td>
-                    <h4>987€</h4>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="img/apple.jpg" id="p3">
-                </td>
-                <td>
-                    <h4>Ordenador APPLE</h4>
-                </td>
-                <td>
-                    <h4>987€</h4>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="img/pb.jpg" id="p4">
-                </td>
-                <td>
-                    <h4>Ordenador PBELL</h4>
-                </td>
-                <td>
-                    <h4>987€</h4>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="img/acer.jpg">
-                </td>
-                <td>
-                    <h4>Ordenador ACER</h4>
-                </td>
-                <td>
-                    <h4>987€</h4>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div id="carrito">
-        <div id="cesta">
-            <img src="img/carrito.jpg" draggable="false" id="ica">
+    <div id="principal">
+        <h1>TIENDA ONLINE</h1>
+        <div id="productos">
+            <table>
+                <tr>
+                    <th>IMAGEN</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>PRECIO</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/dell.jpg" id="p1">
+                    </td>
+                    <td>
+                        <h4>Ordenador DELL</h4>
+                    </td>
+                    <td>
+                        <h4>987€</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/sony.jpg" id="p2">
+                    </td>
+                    <td>
+                        <h4>Ordenador SONY</h4>
+                    </td>
+                    <td>
+                        <h4>987€</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/apple.jpg" id="p3">
+                    </td>
+                    <td>
+                        <h4>Ordenador APPLE</h4>
+                    </td>
+                    <td>
+                        <h4>987€</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/pb.jpg" id="p4">
+                    </td>
+                    <td>
+                        <h4>Ordenador PBELL</h4>
+                    </td>
+                    <td>
+                        <h4>987€</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/acer.jpg">
+                    </td>
+                    <td>
+                        <h4>Ordenador ACER</h4>
+                    </td>
+                    <td>
+                        <h4>987€</h4>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div id="basura">
-            <img src="img/cubo.jpg" draggable="false" id="iba">
+        <div id="carrito">
+            <div id="cesta">
+                <img src="img/carrito.jpg" draggable="false" id="ica">
+            </div>
+            <div id="basura">
+                <img src="img/cubo.jpg" draggable="false" id="iba">
+            </div>
         </div>
+        <div id="pie"></div>
     </div>
-    <div id="pie"></div>
-</div>
+    <script>
+        const cesta = document.querySelector('#cesta');
+        const basura = document.querySelector('#basura');
+        const trs = document.querySelectorAll('tr');
+
+        for (let i = 0; i < trs.length; i++) {
+            const element = trs[i];
+            jugacu.draggable(element, [
+                {
+                    container: cesta,
+                    condition: (event, element, container) => {
+                        const div = document.createElement('div');
+                        div.classList.add('owo');
+                        div.innerHTML += element.children[1].children[0].innerHTML;
+                        div.innerHTML += element.children[2].children[0].innerHTML;
+                        container.appendChild(div);
+                        jugacu.draggable(div, [
+                            {
+                                container: basura,
+                                condition: (event, element, container) => {
+                                    element.parentNode.removeChild(element);
+                                    return false;
+                                }
+                            }
+                        ]);
+                        return false;
+                    }
+                },
+            ],
+                {
+                    ghostMode: true,
+                }
+            );
+        }
+
+    </script>
 </body>
+
 </html>
