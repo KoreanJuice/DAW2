@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="Persona.js"></script>
+    <script src="Alumno.js"></script>
+    <script src="Profesor.js"></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h1>Cursos para Desempleados - Ayuntamiento de Logroño</h1>
+    <form>
+        <fieldset>
+            <legend>Introduce tus datos para darte de alta</legend>
+            <label>Nombre y Apellidos <br>
+                <input type="text" id="name" minlength="5" maxlength="60" required>
+            </label>
+            <br>
+            <label>Edad <br>
+                <input type="number" id="age">
+            </label>
+            <br>
+            <label>Sexo</label><br>
+            <label>
+                <input type="radio" name="sex" value="male">Hombre<br>
+            </label>
+            <label>
+                <input type="radio" name="sex" value="female">Mujer<br>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Si eres profesor introduce tus años de experiencia y pulsa REGISTRAR</legend>
+            <label>Años de experiencia:<br>
+                <input type="number" id="exp">
+            </label>
+            <br>
+            <br>
+            <input type="button" value="REGISTRAR">
+        </fieldset>
+        <fieldset>
+            <legend>Si eres alumno introduce tu e-mail y el curso donde deseas MATRICULAR</legend>
+            <label>Correo electronico:<br>
+                <input type="email" id="email" minlength="5" maxlength="50">
+            </label>
+            <br>
+            <label>Curso:<br>
+                <input type="text" id="curso" minlength="3" maxlength="60">
+            </label>
+            <br>
+            <label>Estudios realizados:<br>
+                <input type="text" id="curso" minlength="3" maxlength="200">
+            </label>
+            <br>
+            <br>
+            <input type="button" value="MATRICULAR">
+        </fieldset>
+    </form>
+    <script>
+        
+    </script>
+</body>
+</html>

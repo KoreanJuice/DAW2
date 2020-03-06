@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        #title {
+            text-align: center;
+        }
+        #image {
+            margin: auto;
+            border: 2px solid green;
+            background-color: lightgreen;
+            height: 400px;
+            width: 500px;
+            text-align: center;
+            padding-top: 2rem;
+        }
+        #image img {
+            width: 450px;
+            height: 350px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Acceso a imagenes. Pulsa sobre la imagen para verla en grande</h1>
+    <div class="container">
+        <img class="images" src="ferrari.jpg" alt="">
+        <img class="images" src="lambor.jpg" alt="">
+        <br>
+        <img class="images" src="harley.jpg" alt="">
+        <img class="images" src="yamaha.jpg" alt="">
+    </div>
+    <br>
+    <div class="display">
+        <h2 id="title">Ferrari Enzo</h2>
+        <div id="image">
+            <img src="ferrari.jpg" alt="test">
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.images')[0].addEventListener('click', dFerrari);
+        document.querySelectorAll('.images')[1].addEventListener('click', dLambo);
+        document.querySelectorAll('.images')[2].addEventListener('click', dHarley);
+        document.querySelectorAll('.images')[3].addEventListener('click', dYamaha);
+        const title = document.querySelector('#title');
+        const image = document.querySelector('#image');
+
+        function dFerrari() {
+            title.innerHTML = 'Ferrari';
+            const bigImage = document.querySelectorAll('.images')[0].cloneNode();
+            image.removeChild(image.children[0]);
+            image.appendChild(bigImage);
+        }
+
+        function dLambo() {
+            title.innerHTML = 'Lambor';
+            const bigImage = document.querySelectorAll('.images')[1].cloneNode();
+            image.removeChild(image.children[0]);
+            image.appendChild(bigImage);
+        }
+
+        function dHarley() {
+            title.innerHTML = 'Harley';
+            const bigImage = document.querySelectorAll('.images')[2].cloneNode();
+            image.removeChild(image.children[0]);
+            image.appendChild(bigImage);
+        }
+
+        function dYamaha() {
+            title.innerHTML = 'Yamaha';
+            const bigImage = document.querySelectorAll('.images')[3].cloneNode();
+            image.removeChild(image.children[0]);
+            image.appendChild(bigImage);
+        }
+    </script>
+</body>
+</html>

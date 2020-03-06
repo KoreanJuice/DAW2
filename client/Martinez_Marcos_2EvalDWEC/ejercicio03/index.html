@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>
+            Categoria
+            <select name="categoria" id="cat">
+                <option disabled selected>Categorias...</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <label>
+            Aficion
+            <select id="afic">
+                <option disabled selected>Aficiones...</option>
+            </select>
+        </label>
+    </div>
+<script>
+    const selCateg = document.querySelector('#cat');
+    const selAfic = document.querySelector('#afic');
+
+    const responseCat = (e) => {
+        const xml = e.target.responseXML;
+        const categorias = xml.querySelectorAll('categoria');
+
+        for (let i = 0; i < categorias.length; i++) {
+            const categoria = categorias[i];
+            const childElement = document.createElement('option');
+            
+            childElement.value = categoria.querySelector('codigo').innerHTML;
+            childElement.innerHTML = categoria.querySelector('nombre').innerHTML;
+            selCateg.appendChild(childElement);
+        }
+    }
+    
+    const XHR = new XMLHttpRequest();
+    XHR.onload = responseCat;
+    XHR.open('GET', 'Categorias.php', true);
+    XHR.send();
+    // hasta aqui carga del primer select
+    const responseAfic = (e) => {
+        const xml = e.target.responseXML;
+        selAfic.innerHTML = '<option disabled selected>Aficiones...</option>';
+        const aficiones = xml.querySelectorAll('aficion');
+
+        for (let i = 0; i < aficiones.length; i++) {
+            const aficion = aficiones[i];
+            const childElementAfic = document.createElement('option');
+            
+            childElementAfic.value = aficion.querySelector('codigo').innerHTML;
+            childElementAfic.innerHTML = aficion.querySelector('nombre').innerHTML;
+            selAfic.append(childElementAfic);
+        }
+    };
+
+    selCateg.addEventListener('change', e => {
+        const formData = new FormData();
+        formData.append('categoria', e.target.value);
+        const XHR = new XMLHttpRequest();
+        
+        XHR.onload = responseAfic;
+        XHR.open('POST', 'Aficiones.php', true);
+        /* no funciona con el request header */
+        //XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        XHR.send(formData);
+    });
+</script>
+</body>
+</html>
