@@ -4,6 +4,8 @@ session_start();
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/fuente/Controlador/defaultController.inc'; /*controladores */
+require_once __DIR__ . '/fuente/Controlador/formController.php'; /*controladores */
+require_once __DIR__ . '/fuente/Controlador/registroController.php'; /*controladores */
 require_once __DIR__ . '/app/conf/rutas.inc'; /*Ubicación del archivo de rutas*/
 
 

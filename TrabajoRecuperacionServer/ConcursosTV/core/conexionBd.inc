@@ -8,9 +8,10 @@ class ConexionBd
   { $params = (new Configuracion())->getDbParams();
 
     try
-    { $this->con = new PDO("sqlsrv:server={$params['server']},{$params['port']};
+    { $this->con = new PDO("mysql:host=localhost;dbname=concursotv", 'marcos', 'rootroot');
+      /*$this->con = new PDO("sqlsrv:server={$params['server']},{$params['port']};
                             Database={$params['database']}",
-                           $params['user'], $params['pass']);
+                           $params['user'], $params['pass']);*/
       $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }catch(PDOException $ex)
     { die("Error de conexión ".$ex->getMessage());

@@ -1,0 +1,37 @@
+#contenido {
+    margin: 0 3rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+label, button {
+    cursor: pointer;
+}
+
+input {
+    margin: .5rem;
+    padding: .5rem;
+}
+
+#nameConcursos {
+    font-weight: bold;
+}
+
+input[type=text], input[type=tel], input[type=email] {
+    width: 80%;
+}
+
+button[type=submit] {
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 3px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+button[type=reset] {
+    border: none;
+    border-radius: 3px;
+    margin: 1rem;
+    padding: 1rem;
+}

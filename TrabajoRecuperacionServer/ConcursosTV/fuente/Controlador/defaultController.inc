@@ -1,6 +1,7 @@
 <?php
 
-// Ejemplo de controlador para página home de la aplicación
+namespace App\Controladores;
+
 class DefaultController
 { public function inicio()
   { 

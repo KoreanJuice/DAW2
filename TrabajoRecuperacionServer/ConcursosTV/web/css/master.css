@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+body {
+    background-color: #1d1d1d;
+}
+
+#wrapper {
+    margin: auto;
+    width: 800px;
+    background-color: white;
+}
+
+nav {
+    padding: 10px;
+    padding-bottom: 0; 
+}
+
+nav a {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+footer {
+    padding: 10px;
+}
+
+#contenido {
+    text-align: center;
+}
+
+hr {
+    height: 1px;
+}
+
+a {
+    color: blue;
+}
+
+#error {
+    color: red;
+}
